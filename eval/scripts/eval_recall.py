@@ -1,35 +1,31 @@
-import json, yaml, re
+import json, yaml, re, argparse
 from pathlib import Path
 from typing import Dict, Any
 from tqdm import tqdm
-
 from langchain_community.vectorstores import FAISS
 from langchain_community.embeddings import HuggingFaceEmbeddings
 
-CFG_FILE    = "configs/default.yaml"
-TOPK        = 10
+TOPK = 10
 
-def load_cfg():
-    with open(CFG_FILE, "r") as f:
+def load_cfg(path: str) -> Dict[str, Any]:
+    with open(path, "r") as f:
         return yaml.safe_load(f)
 
 def norm_path(p: str) -> str:
-    """Normalize file path for matching"""
     return re.sub(r"[\\/]+", "/", (p or "").strip().lower())
 
-def load_retriever():
-    cfg = load_cfg()
+def load_retriever(cfg):
     embed_model = cfg["embedding"]["model"]
     index_dir = cfg["vectorstore"]["path"]
     embed = HuggingFaceEmbeddings(model_name=embed_model)
     vs = FAISS.load_local(index_dir, embed, allow_dangerous_deserialization=True)
     return vs.as_retriever(search_kwargs={"k": TOPK})
 
-def evaluate():
-    cfg = load_cfg()
+def evaluate(cfg_path: str):
+    cfg = load_cfg(cfg_path)
     eval_file = cfg["eval"]["no_anchor"]
     eval_items = json.loads(Path(eval_file).read_text())
-    retriever = load_retriever()
+    retriever = load_retriever(cfg)
 
     total = 0
     hits_at = {1: 0, 3: 0, 5: 0, 10: 0}
@@ -83,11 +79,13 @@ def evaluate():
     }
 
     report_file = cfg["eval"]["recall_file"]
-
     Path(report_file).parent.mkdir(parents=True, exist_ok=True)
     Path(report_file).write_text(json.dumps(report, ensure_ascii=False, indent=2))
     print(json.dumps(report, ensure_ascii=False, indent=2))
     print(f"Saved report to {report_file}")
 
 if __name__ == "__main__":
-    evaluate()
+    p = argparse.ArgumentParser()
+    p.add_argument("--config", "-c", type=str, default="configs/default.yaml")
+    args = p.parse_args()
+    evaluate(args.config)

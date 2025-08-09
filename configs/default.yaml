@@ -27,8 +27,8 @@ vectorstore:
 eval:
   anchor: "eval/data/evaluation_set.json"
   no_anchor: "eval/data/evaluation_set_no_anchor.json"
-  recall_file: "eval/reports/recall_report.json"
-  accuracy_file: "eval/reports/recall_report.json"
+  recall_file: "eval/reports/baseline/recall_report.json"
+  accuracy_file: "eval/reports/baseline/accuracy_report.json"
 
 app:
   max_context_docs: 4

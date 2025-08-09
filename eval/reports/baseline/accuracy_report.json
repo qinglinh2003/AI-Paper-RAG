@@ -1,4 +1,4 @@
-{ 
+{
   "score_distribution": {
     "1.0": 24,
     "0.8": 46,
@@ -7,8 +7,7 @@
     "0.0": 13
   },
   "avg_score": 0.71,
-  "results":
-  [
+  "results": [
     {
       "question": "which large language model (LLM) had the highest recall among those evaluated?",
       "reference_answer": "GEMMA3:27B had the highest recall of all models evaluated, with a recall rate of 94%.",

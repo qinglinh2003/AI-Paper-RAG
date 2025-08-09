@@ -13,8 +13,7 @@ from langchain_community.embeddings import HuggingFaceEmbeddings
 
 
 CFG_FILE     = "configs/default.yaml"
-SMOKE_LIMIT  = None   
-REPORT_FILE  = "eval/reports/accuracy_report.json"
+SMOKE_LIMIT  = None  
 FIVE_LEVELS  = [1.0, 0.8, 0.6, 0.3, 0.0]
 
 
@@ -24,7 +23,6 @@ def load_cfg() -> Dict[str, Any]:
 
     eval_cfg = cfg.get("eval", {})
     eval_cfg.setdefault("index_dir", "data/processed/faiss_index")
-    eval_cfg.setdefault("eval_file", "eval/data/evaluation_set_no_anchor.json")
     eval_cfg.setdefault("topk", 3)
     cfg["eval"] = eval_cfg
 
@@ -111,8 +109,9 @@ def main():
     cfg = load_cfg()
     eval_cfg = cfg["eval"]
     acc_cfg  = cfg["eval_accuracy"]
+    eval_data = eval_cfg["no_anchor"]
 
-    eval_items = json.loads(Path(eval_cfg["eval_file"]).read_text())
+    eval_items = json.loads(Path(eval_data).read_text())
     if SMOKE_LIMIT is not None:
         eval_items = eval_items[:SMOKE_LIMIT]
 
@@ -161,23 +160,23 @@ def main():
             "score": score
         })
 
-    output = {
-    "score_distribution": dist,
-    "avg_score": round(avg, 4),
-    "results": results
-    }
-
-    Path(REPORT_FILE).parent.mkdir(parents=True, exist_ok=True)
-    Path(REPORT_FILE).write_text(json.dumps(output, ensure_ascii=False, indent=2))
-
-
     dist = {lv: 0 for lv in FIVE_LEVELS}
     for r in results: dist[r["score"]] = dist.get(r["score"], 0) + 1
     avg = sum(r["score"] for r in results) / len(results) if results else 0.0
 
-    print(f"Saved: {REPORT_FILE}")
+   
     print("Score distribution:", {k: dist[k] for k in FIVE_LEVELS})
     print(f"Avg score: {avg:.4f}")
+
+    output = {
+        "score_distribution": dist,
+        "avg_score": round(avg, 4),
+        "results": results
+    }
+    report_file = eval_cfg["accuracy_file"]
+    Path(report_file).parent.mkdir(parents=True, exist_ok=True)
+    Path(report_file).write_text(json.dumps(output, ensure_ascii=False, indent=2))
+    print(f"Saved: {report_file}")
 
 
 if __name__ == "__main__":

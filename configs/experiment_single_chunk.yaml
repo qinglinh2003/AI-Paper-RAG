@@ -1,0 +1,33 @@
+model:
+  llm: "Qwen/Qwen2.5-7B-Instruct"
+  backend: "transformers"
+  dtype: "float16"
+  device_map: "auto"
+
+embedding:
+  model: "BAAI/bge-large-en-v1.5"
+
+reranker:
+  model: "BAAI/bge-reranker-v2-m3"
+  enabled: true
+
+retrieval:
+  top_k: 60         
+  rerank_k: 8        
+
+app:
+  max_context_docs: 1  
+  max_new_tokens: 256
+
+data:
+  raw_dir: "data/raw"
+  processed_dir: "data/processed"
+
+vectorstore:
+  path: "data/processed/faiss_index"
+
+eval:
+  anchor: "eval/data/evaluation_set.json"
+  no_anchor: "eval/data/evaluation_set_no_anchor.json"
+  recall_file: "eval/reports/single_chunk/recall_report.json"
+  accuracy_file: "eval/reports/single_chunk/accuracy_report.json"

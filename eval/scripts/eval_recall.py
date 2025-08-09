@@ -32,7 +32,8 @@ def evaluate(cfg_path: str):
             continue
 
         total += 1
-        docs = retrieve_then_rerank(q, cfg_path, topn=TOPK)
+        docs = retrieve_then_rerank(q, cfg_path, topn=TOPK, mode="recall")
+
 
         rank = None
         top_docs_dbg = []

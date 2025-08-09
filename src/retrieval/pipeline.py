@@ -38,7 +38,7 @@ def _score_sentences_simple(query: str, sentences):
     for s in sentences:
         toks = set(re.findall(r"[A-Za-z0-9\-\_]+", s.lower()))
         overlap = len(q & toks)
-        bonus = sum(1 for t in q if t and t in s)  # 关键词出现次数
+        bonus = sum(1 for t in q if t and t in s) 
         scores.append(overlap + 0.1 * bonus)
     return scores
 
@@ -66,17 +66,21 @@ def retrieve_then_rerank(query: str, cfg_path: str, topn: int = None, mode: str 
     if rr is not None:
         docs = rr.apply(query, docs)
 
+    rk = int(cfg["retrieval"].get("rerank_k", 8))
+
+    if mode == "recall":
+        limit = topn if topn is not None else max(10, rk)
+        return docs[:limit]
+
     if mode == "accuracy":
         docs = _cap_per_source(docs, cap=1)
+        cands = docs[:rk]
+        if cands:
+            best = _pick_chunk_by_best_sentence(query, cands)
+            docs = [best] if best is not None else cands[:1]
+        cutoff = topn if topn is not None else 1
+        return docs[:cutoff]
 
-    rk = int(cfg["retrieval"].get("rerank_k", 8))
-    cands = docs[:rk]
+    return docs[: (topn if topn is not None else rk)]
 
-    if mode == "accuracy" and cands:
-        best = _pick_chunk_by_best_sentence(query, cands)
-        docs = [best] if best is not None else cands[:1]
-    else:
-        docs = cands
 
-    cutoff = topn if topn is not None else rk
-    return docs[:cutoff]

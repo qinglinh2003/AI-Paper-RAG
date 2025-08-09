@@ -1,0 +1,612 @@
+{
+  "score_distribution": {
+    "1.0": 45,
+    "0.8": 36,
+    "0.6": 10,
+    "0.3": 2,
+    "0.0": 7
+  },
+  "avg_score": 0.804,
+  "results": [
+    {
+      "question": "which large language model (LLM) had the highest recall among those evaluated?",
+      "reference_answer": "GEMMA3:27B had the highest recall of all models evaluated, with a recall rate of 94%.",
+      "pred_answer": "GEMMA3:27B stood out for its highest recall of all models evaluated (94%), with only 26 false negatives.",
+      "score": 1.0
+    },
+    {
+      "question": "what criterion is used to filter out uninformative samples in the data filtering process?",
+      "reference_answer": "Samples with a reward range ∆Ri,j ≤ 0.05 are discarded because they provide limited learning signals for the model during the DGRPO process.",
+      "pred_answer": "Samples with a reward range ∆Ri,j ≤ 0.05 are discarded, as they provide limited learning signals for the model during the DGRPO process.",
+      "score": 1.0
+    },
+    {
+      "question": "what type of mappings are often of interest beyond linear ones in the context of kernelized metric learning?",
+      "reference_answer": "Nonlinear mappings are often of interest beyond linear ones.",
+      "pred_answer": "Often, beyond linear mappings, richer mappings such as those obtained through kernel methods and neural networks are of interest in the context of kernelized metric learning.",
+      "score": 0.8
+    },
+    {
+      "question": "how are dense matrices stored to ensure better cache locality during the factorisation of the frontal matrices?",
+      "reference_answer": "Dense matrices are stored in blocks of columns, with each block storing the upper triangular part by rows.",
+      "pred_answer": "Dense matrices are stored in blocks of columns, where each block explicitly stores the upper triangular part to maintain advantageous alignment of the data. This format, shown in Figure 3c, ensures better cache locality when performing the dense factorisation of the frontal matrices.",
+      "score": 0.8
+    },
+    {
+      "question": "what does philosopher Emanuele Coccia argue about the understanding of biology and life?",
+      "reference_answer": "Emanuele Coccia argues that our understanding of biology and life often neglects the profound and distinct biological narratives of plants.",
+      "pred_answer": "Emanuele Coccia argues that our understanding of biology, and indeed of \"life\" itself, often neglects the profound and distinct biological narratives of plants, exposing an oversight within the life sciences and philosophy.",
+      "score": 1.0
+    },
+    {
+      "question": "what is the shifted geometric mean time for IPX and HiPO when considering all 49 problems?",
+      "reference_answer": "IPX has a mean of 338 seconds and HiPO has a mean of 274 seconds.",
+      "pred_answer": "Considering all 49 problems, IPX has a mean of 338 seconds and HiPO of 274 seconds.",
+      "score": 1.0
+    },
+    {
+      "question": "which paper discusses generating 3D human-object interactions with physics-informed diffusion?",
+      "reference_answer": "The paper titled 'InterDiff: Generating 3d human-object interactions with physics-informed diffusion' by Sirui Xu, Zhengyuan Li, Yu-Xiong Wang, and Liang-Yan Gui discusses this topic.",
+      "pred_answer": "InterDiff: Generating 3D human-object interactions with physics-informed diffusion is discussed in the paper by Sirui Xu, Zhengyuan Li, Yu-Xiong Wang, and Liang-Yan Gui, presented at ICCV in 2023.",
+      "score": 1.0
+    },
+    {
+      "question": "which paper discusses leveraging frequency analysis for deep fake image recognition?",
+      "reference_answer": "Joel Frank et al. discussed leveraging frequency analysis for deep fake image recognition in their 2020 paper at ICML.",
+      "pred_answer": "Joel Frank, Thorsten Eisenhofer, Lea Schönherr, Asja Fischer, Dorothea Kolossa, and Thorsten Holz. 2020. Leveraging frequency analysis for deep fake image recognition. In ICML. 3247–3258.",
+      "score": 1.0
+    },
+    {
+      "question": "what do initial experiments reveal about the performance enhancement of embeddings from standard extractors?",
+      "reference_answer": "Initial experiments reveal that embeddings from standard extractors enhance performance but rely on modality-specific encoders and ad hoc fusion strategies that lack control over cross-modal alignment.",
+      "pred_answer": "Initial experiments reveal that embeddings from large language vision models (LVLMs) associated with Qwen2-VL and Phi-3.5-VI secure the highest rankings across most extractor-dataset-model-metric combinations, outperforming classical fusion approaches and unimodal visual backbones, thus indicating a significant performance enhancement.",
+      "score": 0.3
+    },
+    {
+      "question": "what are the two main components used in the LLM + RAG baseline system?",
+      "reference_answer": "The LLM + RAG baseline system uses a powerful LLM (Deepseek-V3) combined with a standard RAG pipeline.",
+      "pred_answer": "The LLM + RAG baseline system uses a base LLM and novel RAG methods as its two main components.",
+      "score": 0.6
+    },
+    {
+      "question": "which paper discusses the discovery of objects and their modes of interaction in an egocentric unsupervised manner?",
+      "reference_answer": "The paper by Dima Damen, Teesid Leelasawassuk, and Walterio Mayol-Cuevas titled 'You-do, i-learn: Egocentric unsupervised discovery of objects and their modes of interaction towards video-based guidance' discusses this topic.",
+      "pred_answer": "Unanswerable. The provided context does not mention any specific paper discussing the discovery of objects and their modes of interaction in an egocentric unsupervised manner.",
+      "score": 0.0
+    },
+    {
+      "question": "how does the case study methodology explore the intersection of biological art with natural sciences?",
+      "reference_answer": "The case study methodology focuses on transformation ideology to explore the intersection of biological art with natural sciences within the Metaverse.",
+      "pred_answer": "Our case study methodology explores the intersection of biological art with natural sciences by examining specific instances where plant life is central to artistic expression, delving into how artists incorporate live plant growth into their works and investigating the biosemiotics—communication, representation, and effects of plants within their ecosystems—that influence artistic creation.",
+      "score": 0.6
+    },
+    {
+      "question": "which paper discusses a unified approach for target-based video segmentation?",
+      "reference_answer": "The paper 'Tarvis: A unified approach for target-based video segmentation' by Athar, A.; Hermans, A.; Luiten, J.; Ramanan, D.; and Leibe, B. discusses a unified approach for target-based video segmentation.",
+      "pred_answer": "Athar, A.; Hermans, A.; Luiten, J.; Ramanan, D.; and Leibe, B. 2023. Tarvis: A unified approach for target-based video segmentation. In Proceedings of the IEEE/CVF Conference on Computer Vision and Pattern Recognition, 18738–18748.",
+      "score": 0.8
+    },
+    {
+      "question": "what statistical method is used to assess the role of magnetic fields in Galactic molecular clouds?",
+      "reference_answer": "The Histogram of Relative Orientations (HRO) is used to assess the role of magnetic fields.",
+      "pred_answer": "The statistical method used to assess the role of magnetic fields in Galactic molecular clouds is the Histogram of Relative Orientations (HRO). This method characterizes the relative orientation between the magnetic field and column density structures to infer the energy balance between the magnetic field, gravity, and turbulence.",
+      "score": 1.0
+    },
+    {
+      "question": "which journal published a review on depression and suicide risk assessment using speech analysis in 2015?",
+      "reference_answer": "The review on depression and suicide risk assessment using speech analysis was published in Speech Communication in 2015.",
+      "pred_answer": "Nicholas Cummins, Stefan Scherer, Jarek Krajewski, Sebastian Schnieder, Julien Epps, and Thomas F Quatieri. 2015. A review of depression and suicide risk assessment using speech analysis. Speech Communication, 71:10–49.",
+      "score": 1.0
+    },
+    {
+      "question": "how does the creation of ecological art within the Metaverse help mitigate environmental impacts?",
+      "reference_answer": "Artists can circumvent some environmental costs associated with physical art production by creating within the Metaverse.",
+      "pred_answer": "By operating in the Metaverse, artists can circumvent some environmental costs associated with physical art production while exploring the constraints imposed by the tangible world through a novel digital framework. This shift allows for a reconsideration of ecological impact, using digital platforms to mitigate the environmental impacts that physical art production can have.",
+      "score": 0.8
+    },
+    {
+      "question": "which paper discusses real-time 3D plane detection and reconstruction from posed monocular videos?",
+      "reference_answer": "The paper 'PlanarRecon: Real-time 3D Plane Detection and Reconstruction from Posed Monocular Videos' by Yiming Xie, Matheus Gadelha, Fengting Yang, Xiaowei Zhou, and Huaizu Jiang discusses this topic.",
+      "pred_answer": "PlanarRecon: Real-time 3D Plane Detection and Reconstruction from Posed Monocular Videos is discussed in the paper by Yiming Xie, Matheus Gadelha, Fengting Yang, Xiaowei Zhou, and Huaizu Jiang.",
+      "score": 1.0
+    },
+    {
+      "question": "what is the proposed solution to address the rigidity of the default reward function?",
+      "reference_answer": "The proposed solution is the Soft Reward Function (SRF), which provides partial credit for the presence of each tag and relaxes the output style.",
+      "pred_answer": "To address the rigidity of the default reward function, the Soft Reward Function (SRF) is proposed, which provides partial credit to the presence of each tag and relaxes output style.",
+      "score": 1.0
+    },
+    {
+      "question": "what is the typical uncertainty factor adopted for the estimated magnetic field strengths?",
+      "reference_answer": "The typical uncertainty factor adopted for the estimated magnetic field strengths is 2.",
+      "pred_answer": "We adopt a typical uncertainty factor of 2, based on Liu et al. (2021), who derived this by applying the DCF method to numerical simulations and comparing the estimates to input models.",
+      "score": 1.0
+    },
+    {
+      "question": "how many diverse and semantically precise retrieval triplets were generated, and what is the total number of object categories they span?",
+      "reference_answer": "The workflow generated 127,166 diverse and semantically precise retrieval triplets spanning 408 object categories.",
+      "pred_answer": "127,166 diverse and semantically precise retrieval triplets were generated, spanning 408 object categories.",
+      "score": 1.0
+    },
+    {
+      "question": "what is one method for obtaining depth maps for specific panoramas when they are not directly available?",
+      "reference_answer": "Depth maps for specific panoramas can be estimated from the images using Structure.",
+      "pred_answer": "When depth maps for specific panoramas are not directly available, they can be estimated from the images using Structure-from-Motion (SfM).",
+      "score": 1.0
+    },
+    {
+      "question": "what is one of the main risks associated with using GenAI for educational content creation?",
+      "reference_answer": "The main risk is that content based on a flawed premise can actively undermine the learning process, leading to student confusion and reinforcing misconceptions.",
+      "pred_answer": "One of the main risks associated with using GenAI for educational content creation is that it can be based on a flawed premise, which can actively undermine the learning process, leading to student confusion and reinforcing misconceptions.",
+      "score": 1.0
+    },
+    {
+      "question": "what is a key innovation of the Qwen3-235B-A22B model from Alibaba?",
+      "reference_answer": "The key innovation of the Qwen3-235B-A22B model is integrating a 'thinking mode' for complex reasoning with a 'non-thinking mode' for fast responses into one framework.",
+      "pred_answer": "The Qwen3-235B-A22B model from Alibaba Cloud features a very large parameter count (235 billion) and is optimized with the A22B architecture, designed for state-of-the-art performance across a wide range of benchmarks.",
+      "score": 0.6
+    },
+    {
+      "question": "what is the reason for excluding certain clouds such as Dust Ridge Clouds B and C from the analysis?",
+      "reference_answer": "These clouds were excluded due to a lack of sufficient data points for statistical analysis.",
+      "pred_answer": "These clouds are excluded from the analysis due to a lack of sufficient independent polarization detections to reliably trace magnetic field alignments across different density bins.",
+      "score": 0.8
+    },
+    {
+      "question": "how do the performance outcomes compare between IPX and HiPO for larger problem sizes?",
+      "reference_answer": "For larger problem sizes, HiPO outperforms IPX by one order of magnitude.",
+      "pred_answer": "For larger sizes, HiPO outperforms IPX by one order of magnitude, with the time taken by HiPO growing liken0.97 compared to IPX's liken1.85 growth.",
+      "score": 0.8
+    },
+    {
+      "question": "what method of sampling collision partners best recovers the analytical formula for temperature change?",
+      "reference_answer": "The data of Ty using direct sampling of a Maxwell-Boltzmann distribution best recovers the analytical formula.",
+      "pred_answer": "The method of directly sampling a Maxwell-Boltzmann distribution for collision partners recovers the analytical formula for temperature change the best, as the buffer gas flow pattern is approximately symmetric upon reflection on the x-z plane for this method.",
+      "score": 0.8
+    },
+    {
+      "question": "what are some future improvements planned for the HiPO solver?",
+      "reference_answer": "Future improvements include enhancing parallelisation with multi-threading, improving memory allocation and management, and enhancing solver accuracy through better regularisation and pivoting strategies.",
+      "pred_answer": "Future improvements to the HiPO solver include enhancing the parallelisation of the code using multi-threading during the formation of normal equations and performs solves, improving memory allocation and management for the factorisation stages, and improving solver accuracy through better regularisation and pivoting strategies.",
+      "score": 0.8
+    },
+    {
+      "question": "which paper discusses deep metric learning for image retrieval in the context of smart city development?",
+      "reference_answer": "The paper by Qi Liu, Wenhan Li, Zhiyuan Chen, and Bin Hua titled 'Deep metric learning for image retrieval in smart city development' discusses this topic.",
+      "pred_answer": "Qi Liu, Wenhan Li, Zhiyuan Chen, and Bin Hua discuss deep metric learning for image retrieval in the context of smart city development in their paper \"Deep metric learning for image retrieval in smart city development\" published in Sustainable Cities and Society, 73:103067, 2021.",
+      "score": 1.0
+    },
+    {
+      "question": "what benefit does the formal verification of dynamic policies provide for enterprise systems?",
+      "reference_answer": "Formal verification of dynamic policies helps in finding errors in the design and implementation of the system, thereby guarding against unauthorized access.",
+      "pred_answer": "Formally verifying dynamic policies is beneficial for enterprise systems as it helps in automatically finding errors in the design/implementation of the system and reduces the probability of malicious attacks, according to the research done by Kanner and Kanner (2021).",
+      "score": 0.8
+    },
+    {
+      "question": "where do the least expressive elements in both pitch and timing typically occur?",
+      "reference_answer": "The least expressive elements in both pitch and timing typically occur with the syllables that are near the tala-cycle boundary.",
+      "pred_answer": "The least expressive elements in both pitch and timing typically occur with the syllables that are near the tala-cycle boundary.",
+      "score": 1.0
+    },
+    {
+      "question": "what is the range of uniform squeezing achieved across 60 spectral modes?",
+      "reference_answer": "The uniform squeezing achieved ranges between –7 dB and -6.5 dB.",
+      "pred_answer": "The uniform squeezing achieved across 60 spectral modes ranged between –7 dB and -6.5 dB.",
+      "score": 1.0
+    },
+    {
+      "question": "what is the distinction between visual encodings and chart types?",
+      "reference_answer": "Visual encodings are distinct from chart types; chart types result from decisions regarding which visual channel(s) are used to encode the data.",
+      "pred_answer": "Visual encodings are distinct from chart types, with visual encodings resulting from decisions regarding which visual channel(s) are used to encode the data, while chart types are the overall structure or format of the visualization.",
+      "score": 0.8
+    },
+    {
+      "question": "what aspect of MPJs' performance is overlooked by existing benchmarks?",
+      "reference_answer": "Existing benchmarks overlook the reliability of the confidence scores produced by MPJs at the step level.",
+      "pred_answer": "Existing benchmarks generally overlook the confidence performance of process judges, specifically whether the confidence scores produced by MPJs at the step level are reliable.",
+      "score": 0.8
+    },
+    {
+      "question": "which paper discusses enhancing large language models' spatial intelligence via GRPO?",
+      "reference_answer": "The paper titled 'AlphaMaze: Enhancing Large Language Models’ Spatial Intelligence via GRPO' by Alan Dao and Dinh Bach Vu discusses this topic.",
+      "pred_answer": "unanswerable",
+      "score": 0.0
+    },
+    {
+      "question": "what method is used to correct perspective distortions in images before semantic analysis?",
+      "reference_answer": "Orthographic transformation (orthorectification) is used to correct perspective distortions.",
+      "pred_answer": "Orthographic transformation, also referred to as orthorectification, is applied to correct perspective distortions in images before semantic analysis, ensuring that parallel lines remain parallel and objects retain their consistent size.",
+      "score": 1.0
+    },
+    {
+      "question": "what is the accuracy improvement when combining models compared to using GPT-4o alone?",
+      "reference_answer": "The combination of models improves accuracy to 86.72%, which is an improvement over the 80.60% achieved by GPT-4o alone.",
+      "pred_answer": "When combining models with the SEDI strategy, particularly using gpt-4o+SEDI with rich prompts and expert features, there is an improvement in AUPRC from 0.61 to 0.86 and from 0.71 to 0.79, showing an accuracy improvement when compared to using GPT-4o alone.",
+      "score": 0.6
+    },
+    {
+      "question": "how does Judith Butler's concept of gender performativity influence the art world?",
+      "reference_answer": "Judith Butler's concept of gender performativity prompts the art world to reconsider traditional concepts of gender and biological determinism, encouraging artists to depict the full range of biological and morphological diversity.",
+      "pred_answer": "Judith Butler's concept of gender performativity prompts the art world to reconsider traditional concepts of gender and biological determinism, advocating for a more flexible comprehension of identity. Artists are encouraged to produce artworks depicting the full range of biological and morphological diversity in nature, thereby capturing the intricate and diverse nature of gender expressions and identities observed in human societies.",
+      "score": 0.8
+    },
+    {
+      "question": "what conclusion can be drawn about the relationship between bRS(bL) and bRS(bL0)?",
+      "reference_answer": "The relationship shows that bRS(bL) equals bRS(bL0).",
+      "pred_answer": "We can conclude that \\( bRS(bL) \\) is at least as small as \\( bRS(bL0) \\), i.e., \\( bRS(bL0) \\leq bRS(bL) \\), and the reverse inequality also holds, leading to \\( bRS(bL) = bRS(bL0) \\).",
+      "score": 1.0
+    },
+    {
+      "question": "what condition must be met for a semigroup (φt)t≥0 to be classified as elliptic?",
+      "reference_answer": "A semigroup (φt)t≥0 is classified as elliptic if there exists z0 ∈ D such that φt0(z0) = z0 for some t0 > 0.",
+      "pred_answer": "A semigroup \\((\\varphi_t)_{t\\geq0}\\) is classified as elliptic if there exists \\(z_0 \\in D\\) such that \\(\\varphi_{t_0}(z_0) = z_0\\) for some \\(t_0 > 0\\).",
+      "score": 1.0
+    },
+    {
+      "question": "what are the potential benefits of using UniTalker when it is used appropriately and legally?",
+      "reference_answer": "UniTalker can facilitate the synthesis of personalized content, providing benefits when used appropriately and legally.",
+      "pred_answer": "When used appropriately and legally, UniTalker can benefit a wide range of applications such as film, gaming, podcasting, and other content services, thereby enhancing human experiences.",
+      "score": 0.8
+    },
+    {
+      "question": "what is the title of the article by M. P. Friedlander and D. Orban published in Math. Program. Comput. in 2012?",
+      "reference_answer": "A primal-dual regularized interior-point method for convex quadratic programs.",
+      "pred_answer": "Unanswerable. The provided context does not contain any information about an article by M. P. Friedlander and D. Orban published in Math. Program. Comput. in 2012.",
+      "score": 0.0
+    },
+    {
+      "question": "what has been the shift in detection methods for clinical depression?",
+      "reference_answer": "Detection methods have shifted from analyzing handcrafted features within single modalities to learning.",
+      "pred_answer": "Most studies have relied on limited or non-clinically validated data and often prioritized complex model design over real-world effectiveness, but this paper introduces C-MIND, a new dataset aimed at providing a clinically grounded foundation for depression research, shifting towards more comprehensive and realistic assessment methods.",
+      "score": 0.6
+    },
+    {
+      "question": "what does the shift in relative orientations between magnetic fields and column density structures indicate in Dust Ridge Cloud E/F?",
+      "reference_answer": "The relative orientations between magnetic fields and column density structures in Dust Ridge Cloud E/F shift from perpendicular to parallel and back to perpendicular as density increases.",
+      "pred_answer": "The shift in relative orientations between magnetic fields and column density structures in Dust Ridge Cloud E/F indicates a change from a perpendicular alignment at lower densities to a parallel alignment at higher densities, and back to a perpendicular alignment again as density increases.",
+      "score": 1.0
+    },
+    {
+      "question": "how is the projection of any point x ∈ Rd onto the principal component directions computed?",
+      "reference_answer": "The projection is computed by forming the Gram matrix, centering it, computing its eigenvectors, and then using these eigenvectors to project x onto the principal components.",
+      "pred_answer": "To compute the projection of any point \\( x \\in \\mathbb{R}^d \\) onto the principal component directions, first form the Gram matrix \\( K \\), center it, and then compute all its eigenvectors. The projection is given by \\( \\varphi(x) = A^T [k(x, x_1), \\ldots, k(x, x_n)]^T \\), where \\( A \\) is formed from these eigenv",
+      "score": 0.8
+    },
+    {
+      "question": "which author published a paper titled 'Extension and restriction principles for the hrt conjecture' in the Journal of Fourier Analysis and Applications in 2019?",
+      "reference_answer": "Kasso A Okoudjou published the paper 'Extension and restriction principles for the hrt conjecture' in the Journal of Fourier Analysis and Applications in 2019.",
+      "pred_answer": "Kasso A. Okoudjou published a paper titled 'Extension and restriction principles for the hrt conjecture' in the Journal of Fourier Analysis and Applications in 2019.",
+      "score": 1.0
+    },
+    {
+      "question": "what is proposed to enhance the clinical awareness of large language models?",
+      "reference_answer": "A novel psychiatric reasoning mechanism is proposed to enhance the clinical awareness of large language models.",
+      "pred_answer": "A novel method that guides the LLM’s reasoning process using structured clinical expertise is proposed to enhance the clinical awareness of large language models.",
+      "score": 0.8
+    },
+    {
+      "question": "which paper discusses the ease of spotting CNN-generated images?",
+      "reference_answer": "The paper by Sheng-Yu Wang, Oliver Wang, Richard Zhang, Andrew Owens, and Alexei A Efros, titled 'CNN-generated images are surprisingly easy to spot... for now', discusses the ease of spotting CNN-generated images.",
+      "pred_answer": "The paper \"CNN-generated images are surprisingly easy to spot... for now\" by Sheng-Yu Wang, Oliver Wang, Richard Zhang, Andrew Owens, and Alexei A. Efros discusses the ease of spotting CNN-generated images. This paper is referenced as [70] in the context.",
+      "score": 1.0
+    },
+    {
+      "question": "what process is used to bridge the lexical gap between user vernacular and formal API or server descriptions?",
+      "reference_answer": "An extensive offline index augmentation process is used to bridge the lexical gap.",
+      "pred_answer": "To bridge the lexical gap between user vernacular and formal API or server descriptions, an extensive offline index augmentation process is performed. This involves defining the holistic description of each server \\(M_i\\), and then utilizing a generative LLM, \\(gLLM-gen\\) with a specific prompt, to produce a large, diverse set of synthetic queries.",
+      "score": 0.8
+    },
+    {
+      "question": "which paper discusses forecasting human-object interaction through joint prediction of motor attention and actions in first-person video?",
+      "reference_answer": "The paper by Miao Liu, Siyu Tang, Yin Li, and James M Rehg titled 'Forecasting Human-Object Interaction: Joint Prediction of Motor Attention and Actions in First Person Video' discusses this topic.",
+      "pred_answer": "Miao Liu, Siyu Tang, Yin Li, and James M Rehg discuss forecasting human-object interaction through joint prediction of motor attention and actions in first-person video in their paper \"Forecasting human-object interaction: joint prediction of motor attention and actions in first person video.\"",
+      "score": 1.0
+    },
+    {
+      "question": "what specific injection angle of the buffer gas is shown to have advantageous features in the high-throughput regime?",
+      "reference_answer": "An injection angle of 45 degrees for helium in the high-throughput regime shows advantageous features.",
+      "pred_answer": "The helium injection angle at 45° in the high-throughput regime shows unexpectedly advantageous features, including high extraction efficiency and narrow extraction time distributions.",
+      "score": 0.8
+    },
+    {
+      "question": "what is the range of uniform squeezing achieved across 60 spectral modes?",
+      "reference_answer": "The uniform squeezing achieved ranges between –7 dB and -6.5 dB.",
+      "pred_answer": "The uniform squeezing achieved across 60 spectral modes ranged between –7 dB and -6.5 dB.",
+      "score": 1.0
+    },
+    {
+      "question": "how did ecological art transform the role of plants in art?",
+      "reference_answer": "Ecological art transformed plants from passive subjects to active mediums, making them central narrative subjects within the artwork.",
+      "pred_answer": "Ecological art transformed plants from passive subjects to active mediums, communicating biological truths and eliciting emotional responses, thereby challenging the traditional notion of plants as purely passive resources and promoting a shift towards ecocentrism in artistic creation.",
+      "score": 0.8
+    },
+    {
+      "question": "what is the range of mean magnetic field strengths in the Central Molecular Zone?",
+      "reference_answer": "The mean magnetic field strengths in the Central Molecular Zone range from 0.1 to 10 mG.",
+      "pred_answer": "The mean magnetic field strengths in the Central Molecular Zone range from 0.1 to 10 mG.",
+      "score": 1.0
+    },
+    {
+      "question": "what happens when the unlearning parameter α is increased to 0.05?",
+      "reference_answer": "Performance degrades with occasional repetitive outputs.",
+      "pred_answer": "When the unlearning parameter α is increased to 0.05, performance degrades with occasional repetitive outputs. This suggests that the excessive unlearning process disrupts the model’s original generative capabilities.",
+      "score": 1.0
+    },
+    {
+      "question": "what are the performance improvements of RoboTron-Sim in the H2D case compared to other methods?",
+      "reference_answer": "RoboTron-Sim achieves breakthrough enhancements with a 48.1% reduction in the H2D case.",
+      "pred_answer": "RoboTron-Sim achieves a 48.1% reduction in collision rates and a significant 67% decrease in L2 distance in H2D scenarios compared to the baseline approach, showcasing breakthrough enhancements in handling hard cases.",
+      "score": 0.8
+    },
+    {
+      "question": "what is the page number where Tobias Vente's work on advancing automation of design decisions in recommender systems is cited?",
+      "reference_answer": "The citation appears on page 16.",
+      "pred_answer": "Tobias Vente's work on advancing automation of design decisions in recommender systems is cited on page 1355–1360 in [34] Tobias Vente. 2023. Advancing Automation of Design Decisions in Recommender System Pipelines. In Proceedings of the 17th ACM Conference on Recommender Systems.",
+      "score": 0.6
+    },
+    {
+      "question": "what type of skills are required for chart understanding?",
+      "reference_answer": "Chart understanding requires visual perception, abstraction, and reasoning.",
+      "pred_answer": "Chart understanding requires skills in 'bottom-up' visual perception, mapping visual features to data, and using those mapped values to answer task-specific questions, involving six visual encoding channels and eight tasks as covered by the ENCQA benchmark.",
+      "score": 0.8
+    },
+    {
+      "question": "what is the improvement in GPT-4o's Macro-F1 score when combining transcripts from multiple psychiatric tasks?",
+      "reference_answer": "GPT-4o's Macro-F1 score improves from 50.48% (INT only) to 55.68% (INT+VFT), and further to 60.53% when Psychiatric Reasoning is applied.",
+      "pred_answer": "GPT-4o’s Macro-F1 score improves from 50.48% (INT only) to 55.68% (INT+VFT), and further to 60.53% when Psychiatric Reasoning is applied.",
+      "score": 1.0
+    },
+    {
+      "question": "what is observed about the millimeter luminosity in prototypical SgXBs compared to SFXTs?",
+      "reference_answer": "The millimeter luminosity in prototypical SgXBs is systematically higher than in SFXTs.",
+      "pred_answer": "We find a systematically higher millimeter luminosity in prototypical SgXBs than in SFXTs.",
+      "score": 1.0
+    },
+    {
+      "question": "what method is proposed to enhance the accuracy of gesture recognition classifiers?",
+      "reference_answer": "The authors propose computing dense optical flow to highlight the dynamics of the contact in tactile images, which helps distinguish between gestures producing similar tactile images.",
+      "pred_answer": "The proposed method involves augmenting tactile images by adding information on the variation of pixel intensities and displacement between consecutive time frames using optical flow, resulting in a 3-channel tactile image that captures both contact shape and its dynamics.",
+      "score": 0.8
+    },
+    {
+      "question": "what issue arises from using cameras at ground level for capturing images of building facades?",
+      "reference_answer": "Cameras positioned at ground level and angled upwards introduce significant perspective distortion, leading to blurring in both the reconstructed 3D renderings and the orthographic images.",
+      "pred_answer": "Cameras positioned at ground level and angled upwards often introduce significant perspective distortion, resulting in blurring in both the reconstructed 3D renderings and the orthographic images, particularly impacting the detection of windows at higher elevations (decrease in recall), especially when the windows are small.",
+      "score": 0.8
+    },
+    {
+      "question": "what characterizes the local rotation of the field and how does it vary in the helium inlet line?",
+      "reference_answer": "The vorticity of the flow, defined as w = ∇ × u, characterizes the local rotation of the field. It shows strong features in the helium inlet line and changes sign across the center of the pipe.",
+      "pred_answer": "The local rotation of the field is characterized by vorticity, defined as \\( w = \\nabla \\times u \\). In the helium inlet line, the y-component of vorticity (\\( w_y \\)) shows strong features, changing sign across the center of the pipe.",
+      "score": 0.8
+    },
+    {
+      "question": "how do artists use digital platforms in the Metaverse to address ecological concerns?",
+      "reference_answer": "Artists use digital platforms in the Metaverse to mitigate the environmental impacts associated with physical art production.",
+      "pred_answer": "Artists use digital platforms in the Metaverse to address ecological concerns by creating immersive environments that challenge perceptions of space, presence, and materiality, and by simulating natural processes through digital media or generating dynamic works using environmental data, thus redefining engagement with ecological aesthetics and concepts.",
+      "score": 0.8
+    },
+    {
+      "question": "what is one method proposed by Zhao et al. to enhance LVLMs?",
+      "reference_answer": "Zhao et al. propose enhancing LVLMs through hallucination-aware direct preference optimization.",
+      "pred_answer": "Zhao et al. proposed Obliviate, a lightweight and parameter-efficient unlearning method that targets training bias by only fine-tuning the LM head with biased inference results derived from the original training data, to mitigate hallucination in LVLMs.",
+      "score": 0.0
+    },
+    {
+      "question": "how does RAIDX's performance compare to SIDA-13B in terms of expert-rated explanation quality?",
+      "reference_answer": "RAIDX significantly outperforms SIDA-13B in terms of expert-rated explanation quality.",
+      "pred_answer": "RAIDX significantly outperforms SIDA-13B in terms of expert-rated explanation quality, achieving a much higher average score with narrower confidence intervals. Specifically, Table 4 shows that RAIDX has an average score of 82.50 compared to SIDA-13B's 67.15.",
+      "score": 1.0
+    },
+    {
+      "question": "how does the cross-encoder model differ from bi-encoders in computing relevance scores?",
+      "reference_answer": "Cross-encoders process the query and product together, directly modeling their interaction, while bi-encoders generate separate embeddings for queries and products and compute relevance scores based on their similarity.",
+      "pred_answer": "Unlike bi-encoders, which generate separate embeddings for queries and products and compute relevance scores based on their similarity, cross-encoders process the query and product together, directly modeling their interaction. This approach allows cross-encoders to capture finer-grained relationships between the query and product, leading to more accurate rankings.",
+      "score": 1.0
+    },
+    {
+      "question": "what is crucial for ensuring there are no errors in the policies that might affect the system's operation?",
+      "reference_answer": "Formal verification of policies is crucial for ensuring there are no errors that might affect the system's operation.",
+      "pred_answer": "Formal verification of the policies is crucial to ensure there are no errors that might affect the system's operation.",
+      "score": 1.0
+    },
+    {
+      "question": "what preprocessing steps were applied to the Baby and Pets categories?",
+      "reference_answer": "The Baby and Pets categories were processed as 5-core, requiring every user and item to have at least 5 associated reviews.",
+      "pred_answer": "The Baby and Pets categories were processed as 5-core, requiring every user and item to have at least 5 associated reviews.",
+      "score": 1.0
+    },
+    {
+      "question": "how do Multi-image settings affect the Confidence Sensitivity Score (CSS) compared to Single-image and Pure-text settings?",
+      "reference_answer": "Most MPJs achieve higher CSS scores in the Multi-image setting than in Single-image or Pure-text settings.",
+      "pred_answer": "Multi-image settings result in higher CSS scores for most MPJs compared to Single-image or Pure-text settings, indicating that richer visual context enhances the model's sensitivity to prediction correctness.",
+      "score": 1.0
+    },
+    {
+      "question": "which publication discusses the concept of plant intelligence?",
+      "reference_answer": "The publication 'Plants are intelligent, here’s how' by Paco Calvo, Monica Gagliano, Gustavo M Souza, and Anthony Trewavas discusses the concept of plant intelligence.",
+      "pred_answer": "Plant intelligence is discussed in [8] Eric D Brenner, Rainer Stahlberg, Stefano Mancuso, Jorge Vivanco, František Baluška, and Elizabeth Van Volkenburgh. 2006. Plant neurobiology: an integrated view of plant signaling. Trends in plant science 11, 8 (2006), 413–419.",
+      "score": 0.0
+    },
+    {
+      "question": "what method was introduced to mitigate the training bias in LVLMs?",
+      "reference_answer": "Obliviate, a lightweight and parameter-efficient unlearning method that targets training bias by fine-tuning the LM head.",
+      "pred_answer": "To mitigate the training bias in LVLMs, the Obliviate method was introduced. This method targets the LM head by fine-tuning it with biased inference results derived from the original training data, thereby reducing hallucination across different tasks while maintaining scalability.",
+      "score": 1.0
+    },
+    {
+      "question": "what is the purpose of Stage 4 in the construction of retrieval triplets?",
+      "reference_answer": "Stage 4 ensures the accuracy and specificity of the triplets, making the COR127K dataset robust and suitable for advanced retrieval tasks.",
+      "pred_answer": "Stage 4 ensures the overall quality and reliability of the constructed triplets through a comprehensive two-stage quality control process, systematically identifying and eliminating unqualified data entries to guarantee semantic accuracy and consistency of the final dataset.",
+      "score": 0.8
+    },
+    {
+      "question": "what is the average score comparison among the top-ranking models?",
+      "reference_answer": "Gemini-2.5-flash ranks first with an average score of 53.33, followed by GPT-4o and GPT-4.1.",
+      "pred_answer": "The top-ranking models show significant variations; for instance, Uni-CoT achieves the highest overall score of 72.76 on the KRIS benchmark, surpassing Gemini 2.0 by 5.59 points, while GPT-4o scores 83.17 on the BEIR metric, indicating strong performance but in a different domain compared to Uni-CoT.",
+      "score": 0.3
+    },
+    {
+      "question": "what is a key innovation of the Qwen3-235B-A22B model from Alibaba?",
+      "reference_answer": "The key innovation of the Qwen3-235B-A22B model is integrating a 'thinking mode' for complex reasoning with a 'non-thinking mode' for fast responses into one framework.",
+      "pred_answer": "The Qwen3-235B-A22B model from Alibaba Cloud features a very large parameter count (235 billion) and is optimized with the A22B architecture, designed for state-of-the-art performance across a wide range of benchmarks.",
+      "score": 0.6
+    },
+    {
+      "question": "which paper discusses the concept of universal instance perception as object discovery and retrieval?",
+      "reference_answer": "The paper titled 'Universal instance perception as object discovery and retrieval' by Yan et al. discusses this concept.",
+      "pred_answer": "The paper \"Universal instance perception as object discovery and retrieval\" by Yan et al. (2023a) discusses the concept of universal instance perception as object discovery and retrieval.",
+      "score": 1.0
+    },
+    {
+      "question": "how are the references in R2-AVSBench designed to challenge the model's reasoning abilities?",
+      "reference_answer": "The references in R2-AVSBench are designed with greater lexical and structural diversity, using abstract terms and relative pronouns, which require deeper reasoning about object functions, commonsense knowledge, and contextual cues.",
+      "pred_answer": "The references in R2-A VSBench are designed to challenge the model's reasoning abilities by featuring greater lexical and structural diversity, and requiring deeper reasoning to interpret. They avoid directly revealing the target object, necessitating more reasoning about the object function, commonsense knowledge, audio information, and other contextual cues.",
+      "score": 0.8
+    },
+    {
+      "question": "what are the three reproduction tasks demonstrated using the proposed pipeline?",
+      "reference_answer": "The three reproduction tasks demonstrated are: (i) an AWD–LSTM language model on WikiText–2, (ii) a Transformer–XL model on WikiText–103, and (iii) an autoregressive music model trained on the Lakh MIDI.",
+      "pred_answer": "The three reproduction tasks demonstrated using the proposed pipeline include reproducing the AWD-LSTM baseline from Merity et al. (2017) on the WikiText-2 dataset, and validating the pipeline's ability to extract hyperparameters and reproduce complex AR models beyond language, as shown in the FIGARO Music Transformer case study.",
+      "score": 0.8
+    },
+    {
+      "question": "what did Joseph Beuys and Agnes Denes represent in the early use of plants in ecological art?",
+      "reference_answer": "Joseph Beuys represented the planting of oak trees as a form of social sculpture, while Agnes Denes used a wheat field in the city center as a critical tool to address urban land policies.",
+      "pred_answer": "Joseph Beuys regarded the planting of oak trees as a form of social sculpture and a promise for the future, making the trees symbolic living entities connecting society and the environment. Agnes Denes sown a wheat field in the city center, using plant life as a direct and temporary critical tool to expose issues with urban land policies.",
+      "score": 0.8
+    },
+    {
+      "question": "what does Andy Gracie's 'Autoinducer_Ph-1' installation illustrate about ecological aesthetics?",
+      "reference_answer": "Andy Gracie's 'Autoinducer_Ph-1' illustrates ecological aesthetics by merging traditional ecological practices with advanced technology, using Southeast Asian rice farming techniques and duckweed for natural nitrogen fertilization.",
+      "pred_answer": "Andy Gracie’s “Autoinducer_Ph-1” is a prime illustration of ecological aesthetics that merges traditional ecological practices with advanced technology, utilizing duckweed for natural nitrogen fertilization and creating a dynamic environment that explores the relationship between human technology and ecological systems.",
+      "score": 0.8
+    },
+    {
+      "question": "how many biological artworks from the ADA archive are categorized between 2011 and 2015?",
+      "reference_answer": "There are 23 biological artworks categorized between 2011 and 2015.",
+      "pred_answer": "The ADA archive contains 23 biological artworks categorized between 2011 and 2015.",
+      "score": 1.0
+    },
+    {
+      "question": "what are the observed effects of using conventional contrastive learning methods on BEV detection performance?",
+      "reference_answer": "Conventional contrastive learning methods resulted in a 1.3% mAP decrease with pre-training and only a 1.4% mAP increase with co-training, showing no significant improvement.",
+      "pred_answer": "Conventional contrastive learning methods, which focus on object-centric, image-level contrasts, fail to improve BEV detection performance. On average, pre-training methods result in a 1.3% mAP decrease, while co-training only yields a 1.4% mAP increase.",
+      "score": 0.8
+    },
+    {
+      "question": "what tool is mentioned for formally verifying policies in Zero Trust Distributed Networks?",
+      "reference_answer": "UPPAAL, an open-source tool that acts as a protocol verifier.",
+      "pred_answer": "UPPAAL is mentioned as a tool for formally verifying policies in Zero Trust Distributed Networks (ZTDN). This tool acts as a protocol verifier and can be applied to verify and validate policies.",
+      "score": 1.0
+    },
+    {
+      "question": "which publication discusses the direct laser cooling of a symmetric top molecule?",
+      "reference_answer": "The publication that discusses the direct laser cooling of a symmetric top molecule is 'Direct laser cooling of a symmetric top molecule' by Mitra et al., published in Science in 2020.",
+      "pred_answer": "Direct laser cooling of a symmetric top molecule is discussed in the publication \"Direct laser cooling of a symmetric top molecule\" by Mitra D, Vilas NB, Hallas C, Anderegg L, Augenbraun BL, Baum L, et al., published in Science.",
+      "score": 1.0
+    },
+    {
+      "question": "what is the main goal of integrating contrastive learning into BEV perception?",
+      "reference_answer": "The main goal is to enhance the underlying feature representations in BEV perception models, thereby improving their performance on downstream tasks like object detection.",
+      "pred_answer": "By leveraging contrastive learning, the goal is to enhance the underlying feature representations in BEV perception models, thereby improving their performance on downstream tasks like object detection.",
+      "score": 1.0
+    },
+    {
+      "question": "what are the two main components used in the LLM + RAG baseline system?",
+      "reference_answer": "The LLM + RAG baseline system uses a powerful LLM (Deepseek-V3) combined with a standard RAG pipeline.",
+      "pred_answer": "The LLM + RAG baseline system uses a base LLM and novel RAG methods as its two main components.",
+      "score": 0.6
+    },
+    {
+      "question": "what is the process required to convert the scaled problem back to the original LP formulation?",
+      "reference_answer": "The unscaling process involves recovering the solution to the original LP by checking the signs of the slack variables and Lagrange multipliers for inequality constraints.",
+      "pred_answer": "To convert the scaled problem back to the original LP formulation, one needs to unscale the solution using the matrices \\(C\\) and \\(R\\), and carefully check the signs of the slack variables and Lagrange multipliers to ensure they meet the expected sign constraints from the original problem.",
+      "score": 0.8
+    },
+    {
+      "question": "which paper discusses improving composed image retrieval using contrastive learning with scaling positives and negatives?",
+      "reference_answer": "The paper by Zhangchi Feng, Richong Zhang, and Zhijie Nie discusses improving composed image retrieval via contrastive learning with scaling positives and negatives.",
+      "pred_answer": "Zhangchi Feng, Richong Zhang, and Zhijie Nie's paper \"Improving composed image retrieval via contrastive learning with scaling positives and negatives\" discusses enhancing composed image retrieval using contrastive learning with scaling positives and negatives.",
+      "score": 1.0
+    },
+    {
+      "question": "what is the effect of increasing the amount of caption data on model hallucinations?",
+      "reference_answer": "Increasing the amount of caption data mitigates model hallucinations, as more hallucinated captions expose the model to biased generation patterns, allowing it to better unlearn these patterns.",
+      "pred_answer": "As the volume of caption data increases, model hallucinations are further mitigated, demonstrating the strong scalability of the approach. This improvement is attributed to the model being exposed to more biased generation patterns, enabling it to better unlearn these patterns and thereby reduce hallucinations.",
+      "score": 1.0
+    },
+    {
+      "question": "what level of detail is necessary for accurate window detection and WWR estimation?",
+      "reference_answer": "Accurate window detection and WWR estimation do not require full 3D mesh models; structured abstractions derived from image-plane primitives can offer sufficient accuracy.",
+      "pred_answer": "Accurate window detection and WWR estimation require detailed and carefully captured data, such as those obtained from Camera2D, which provides specific, high-resolution images for the task. In contrast, StreetView imagery, which is captured opportunistically and often from a distance or obstructed viewpoints, lacks the necessary detail, leading to higher error rates and performance issues.",
+      "score": 0.6
+    },
+    {
+      "question": "why is 4DVD faster than SV4D?",
+      "reference_answer": "4DVD is faster than SV4D because it generates content in a decoupled and cascaded manner, requiring only 10 sampling steps in each of its two stages, while SV4D requires iterative sampling for 20 steps.",
+      "pred_answer": "4DVD is faster than SV4D because it generates in a decoupled and cascaded manner. Specifically, 4DVD's first stage generates coarse results quickly with fewer sampling steps, and the second stage uses these coarse results as control hints to further refine the output efficiently.",
+      "score": 0.8
+    },
+    {
+      "question": "what future work is planned to improve classification accuracy?",
+      "reference_answer": "Future work aims to extend the proposed representation by including additional sensors such as torque sensors at the joints to improve classification accuracy.",
+      "pred_answer": "Future works will be dedicated to extending the proposed representation by including additional sensors commonly available on robots (such as torque sensors at the joints), and analyzing how these can be exploited to further improve classification accuracy even while considering more complex gestures.",
+      "score": 0.8
+    },
+    {
+      "question": "which paper discusses depression detection using a structural element graph empowered by LLMs?",
+      "reference_answer": "The paper by Zhuang Chen et al. (2024) discusses depression detection in clinical interviews with LLM-empowered structural element graph.",
+      "pred_answer": "Depmgnn: Matrixial Graph Neural Network for Video-Based Automatic Depression Assessment, discussed in Doc 2, uses a matrixial graph neural network as a structural element to empower depression detection.",
+      "score": 0.0
+    },
+    {
+      "question": "what is the range of magnetic field strengths observed in the Central Molecular Zone (CMZ)?",
+      "reference_answer": "The magnetic field strength in the CMZ ranges from approximately 0.1 to 1 mG.",
+      "pred_answer": "The range of magnetic field strengths observed in the CMZ is from 0.1 to 10 mG, with some molecular clouds exhibiting particularly strong magnetic fields reaching values of approximately 0.1 to 1 mG.",
+      "score": 0.6
+    },
+    {
+      "question": "how many image tuples are sampled for training, validation, and testing?",
+      "reference_answer": "There are 97,750 image tuples for training, 200 for validation, and 360 for testing.",
+      "pred_answer": "For training, 391×250 = 97,750 image tuples are sampled; for validation, 10×20 = 200 tuples are sampled; and for testing, 18×20 = 360 tuples are sampled.",
+      "score": 1.0
+    },
+    {
+      "question": "which paper discusses the topic of adaptive deep metric learning for affective image retrieval and classification?",
+      "reference_answer": "The paper by Xingxu Yao et al., titled 'Adaptive deep metric learning for affective image retrieval and classification', published in IEEE Transactions on Multimedia in 2020.",
+      "pred_answer": "[YSZ+20] Xingxu Yao, Dongyu She, Haiwei Zhang, Jufeng Yang, Ming-Ming Cheng, and Liang Wang. Adaptive deep metric learning for affective image retrieval and classification. IEEE Transactions on Multimedia, 23:1640–1653, 2020.",
+      "score": 1.0
+    },
+    {
+      "question": "what approach is used to improve the utilization of existing image and BEV features without additional supervision signals or external data?",
+      "reference_answer": "Contrastive learning is incorporated as a key gradient to utilize the existing image training data in BEV representation learning.",
+      "pred_answer": "Our work incorporates contrastive learning as a key approach to utilize the existing image and BEV features without adding extra supervision signals or external data.",
+      "score": 1.0
+    },
+    {
+      "question": "which authors contributed to both 'Scaling language models: Methods, analysis & insights from training gopher' and 'Training compute-optimal large language models'?",
+      "reference_answer": "Jordan Hoffmann, Sebastian Borgeaud, Trevor Cai, Eliza Rutherford, Katie Millican, and Tom Hennigan contributed to both papers.",
+      "pred_answer": "Jack Rae, Sebastian Borgeaud, Trevor Cai, Katie Millican, Jordan Hoffmann, Francis Song, John Aslanides, Sarah Henderson, Roman Ring, Susannah Young, Eliza Rutherford, Tom Hennigan, Jacob Menick, Albin Cassirer, Richard Powell, George Driessche, Lisa Hendricks, Maribeth Rauh, Po-Sen Huang, and Geoffrey Irving contributed to both 'Scaling language models: Methods",
+      "score": 0.0
+    },
+    {
+      "question": "what benchmark was introduced to evaluate the hallucination issue in Large Vision-Language Models?",
+      "reference_answer": "The benchmark introduced is called POPEv2.",
+      "pred_answer": "A new benchmark, POPEv2, was introduced to evaluate the hallucination issue in Large Vision-Language Models. This benchmark consists of counterfactual images collected from the training data of LVLMs with certain objects masked.",
+      "score": 0.8
+    },
+    {
+      "question": "what is one possible outcome when a giant companion loses mass through Roche lobe overflow in an X-ray binary?",
+      "reference_answer": "The giant companion may explode as a Type I b/c supernova instead of evolving into a red supergiant.",
+      "pred_answer": "One possible outcome when a giant companion loses mass through Roche lobe overflow in an X-ray binary is that it could explode as a Type Ib/c SN, a significant fraction of which are understood to originate from such envelope stripping by a binary companion.",
+      "score": 0.8
+    },
+    {
+      "question": "how does Judith Butler's concept of gender performativity influence the art world?",
+      "reference_answer": "Judith Butler's concept of gender performativity prompts the art world to reconsider traditional concepts of gender and biological determinism, encouraging artists to depict the full range of biological and morphological diversity.",
+      "pred_answer": "Judith Butler's concept of gender performativity prompts the art world to reconsider traditional concepts of gender and biological determinism, advocating for a more flexible comprehension of identity. Artists are encouraged to produce artworks depicting the full range of biological and morphological diversity in nature, thereby capturing the intricate and diverse nature of gender expressions and identities observed in human societies.",
+      "score": 0.8
+    }
+  ]
+}

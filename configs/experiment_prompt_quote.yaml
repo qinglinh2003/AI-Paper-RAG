@@ -1,0 +1,35 @@
+model:
+  llm: "Qwen/Qwen2-7B-Instruct"
+  backend: "transformers"
+  dtype: "float16"
+  device_map: "auto"
+
+embedding:
+  model: "BAAI/bge-large-en-v1.5"
+reranker:
+  model: "BAAI/bge-reranker-v2-m3"
+  enabled: false        
+
+retrieval:
+  top_k: 8
+  rerank_k: 3           
+chunking:
+  size: 1200
+  overlap: 200
+  separators: ["\n\n", "\n", " ", ""]
+
+data:
+  raw_dir: "data/raw"
+  processed_dir: "data/processed"
+vectorstore:
+  path: "data/processed/faiss_index"
+
+eval:
+  anchor: "eval/data/evaluation_set.json"
+  no_anchor: "eval/data/evaluation_set_no_anchor.json"
+  recall_file: "eval/reports/prompt_quote/recall_report.json"
+  accuracy_file: "eval/reports/prompt_quote/accuracy_report.json"
+
+app:
+  max_context_docs: 4
+  max_new_tokens: 256

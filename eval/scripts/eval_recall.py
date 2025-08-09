@@ -2,8 +2,9 @@ import json, yaml, re, argparse
 from pathlib import Path
 from typing import Dict, Any
 from tqdm import tqdm
-from langchain_community.vectorstores import FAISS
-from langchain_community.embeddings import HuggingFaceEmbeddings
+from src.retrieval.pipeline import retrieve_then_rerank
+import transformers
+transformers.utils.logging.set_verbosity_error()
 
 TOPK = 10
 
@@ -14,18 +15,10 @@ def load_cfg(path: str) -> Dict[str, Any]:
 def norm_path(p: str) -> str:
     return re.sub(r"[\\/]+", "/", (p or "").strip().lower())
 
-def load_retriever(cfg):
-    embed_model = cfg["embedding"]["model"]
-    index_dir = cfg["vectorstore"]["path"]
-    embed = HuggingFaceEmbeddings(model_name=embed_model)
-    vs = FAISS.load_local(index_dir, embed, allow_dangerous_deserialization=True)
-    return vs.as_retriever(search_kwargs={"k": TOPK})
-
 def evaluate(cfg_path: str):
     cfg = load_cfg(cfg_path)
     eval_file = cfg["eval"]["no_anchor"]
     eval_items = json.loads(Path(eval_file).read_text())
-    retriever = load_retriever(cfg)
 
     total = 0
     hits_at = {1: 0, 3: 0, 5: 0, 10: 0}
@@ -39,11 +32,10 @@ def evaluate(cfg_path: str):
             continue
 
         total += 1
-        docs = retriever.get_relevant_documents(q)
+        docs = retrieve_then_rerank(q, cfg_path, topn=TOPK)
 
         rank = None
         top_docs_dbg = []
-
         for i, d in enumerate(docs):
             src_norm = norm_path(d.metadata.get("source") or d.metadata.get("path") or "")
             top_docs_dbg.append({

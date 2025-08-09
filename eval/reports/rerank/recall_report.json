@@ -1,0 +1,347 @@
+{
+  "total": 100,
+  "recall@1": 0.91,
+  "recall@3": 0.92,
+  "recall@5": 0.94,
+  "recall@10": 0.94,
+  "mrr@10": 0.92,
+  "failures_sample": [
+    {
+      "question": "what is a key innovation of the Qwen3-235B-A22B model from Alibaba?",
+      "gold_doc": "data/raw/2508.04531v1_unveiling_the_landscape_of_clinical_depression_assessment_from_behavioral_signatures_to_psychiatric_reasoning.pdf",
+      "top_docs": [
+        {
+          "rank": 1,
+          "source": "data/raw/2508.05503v1_autoiad_manager-driven_multi-agent_collaboration_for_automated_industrial_anomaly_detection.pdf",
+          "snippet": "AI model from Deepseek, known for its strong dialogue\ncapabilities, natural language understanding, and ability to\nfollow complex instructions. This model offers insights into\nhow models specialized i"
+        },
+        {
+          "rank": 2,
+          "source": "data/raw/2508.05503v1_autoiad_manager-driven_multi-agent_collaboration_for_automated_industrial_anomaly_detection.pdf",
+          "snippet": "component, we assess the agent’s ability to operate solely\nwith its LLM’s inherent knowledge and real-time inference\ncapabilities. The experimental results are presented in Ta-\nble 10.\nDetails of Agen"
+        },
+        {
+          "rank": 3,
+          "source": "data/raw/2508.05468v1_tase_token_awareness_and_structured_evaluation_for_multilingual_language_models.pdf",
+          "snippet": "complexity of CJK languages. Korean’s featural syllabic\nsystem and Chinese’s logographic structure require holistic\nmodeling of sub-character components, such as jamo or rad-\nicals. Current models lac"
+        },
+        {
+          "rank": 4,
+          "source": "data/raw/2508.04625v1_finmmr_make_financial_numerical_reasoning_more_multimodal_comprehensive_and_challenging.pdf",
+          "snippet": "Ye, Longhui Yu, Mengnan Dong, Neo Zhang, Ningchen\nMa, Qiwei Pan, Qucheng Gong, Shaowei Liu, Shengling\nMa, Shupeng Wei, Sihan Cao, Siying Huang, Tao Jiang,\nWeihao Gao, Weimin Xiong, Weiran He, Weixiao "
+        },
+        {
+          "rank": 5,
+          "source": "data/raw/2508.05503v1_autoiad_manager-driven_multi-agent_collaboration_for_automated_industrial_anomaly_detection.pdf",
+          "snippet": "Yang, A.; Li, A.; Yang, B.; Zhang, B.; Hui, B.; Zheng, B.;\nYu, B.; Gao, C.; Huang, C.; Lv, C.; Zheng, C.; Liu, D.; Zhou,\nF.; Huang, F.; Hu, F.; Ge, H.; Wei, H.; Lin, H.; Tang, J.;\nYang, J.; Tu, J.; Zh"
+        },
+        {
+          "rank": 6,
+          "source": "data/raw/2508.05468v1_tase_token_awareness_and_structured_evaluation_for_multilingual_language_models.pdf",
+          "snippet": "后位置都与原句不相邻。输入：除此之外\n的其他城市其\nModel Performance Comparison Prediction (qwen2.5-\n14b-instruct, Pre-GRPO):\n<answer>城 市 之 外 的 此 其 其\n他</answer>\nPrediction (qwen2.5-14b-grpo, Post-GRPO):\n首先，我们将输入的字符串分解成单独\n的汉字："
+        },
+        {
+          "rank": 7,
+          "source": "data/raw/2508.05468v1_tase_token_awareness_and_structured_evaluation_for_multilingual_language_models.pdf",
+          "snippet": "The Yi-1.5 series shows only marginal gains despite a\nnearly sixfold increase in size, while Qwen2.5-Instruct ex-\nhibits smoother scaling but still lags behind Qwen3. These\npatterns suggest that beyon"
+        },
+        {
+          "rank": 8,
+          "source": "data/raw/2508.05598v1_unveiling_the_lithium-ion_transport_mechanism_in_li2zrcl6_solid-state_electrolyte_via_deep_learning-accelerated_molecula.pdf",
+          "snippet": "33 \n \n[16] Han, Y .; Jung, S. H.; Kwak, H.; Jun, S.; Kwak, H. H.; Lee, J. H.; Hong, S.; Jung, Y . S. Single‐ or Poly‐\nCrystalline Ni‐Rich Layered Cathode, Sulfide or Halide Solid Electrolyte: Which Wi"
+        },
+        {
+          "rank": 9,
+          "source": "data/raw/2508.05598v1_unveiling_the_lithium-ion_transport_mechanism_in_li2zrcl6_solid-state_electrolyte_via_deep_learning-accelerated_molecula.pdf",
+          "snippet": "protection layer. Advanced Energy Materials 2021, 12 (2). \n[11] Jiang, P.; Du, G.; Cao, J.; Zhang, X.; Zou, C.; Liu, Y .; Lu, X. Solid‐State Li Ion Batteries with Oxide Solid \nElectrolytes: Progress a"
+        },
+        {
+          "rank": 10,
+          "source": "data/raw/2508.05598v1_unveiling_the_lithium-ion_transport_mechanism_in_li2zrcl6_solid-state_electrolyte_via_deep_learning-accelerated_molecula.pdf",
+          "snippet": "Y . S. New Cost‐Effective Halide Solid Electrolytes for All‐Solid‐State batteries: Mechanochemically prepared \nFe3+‐Substituted Li2ZrCl6. Advanced Energy Materials 2021, 11 (12). \n[25] Wang, K.; Gu, Z"
+        }
+      ]
+    },
+    {
+      "question": "which paper discusses enhancing large language models' spatial intelligence via GRPO?",
+      "gold_doc": "data/raw/2508.04524v1_raidx_a_retrieval-augmented_generation_and_grpo_reinforcement_learning_framework_for_explainable_deepfake_detection.pdf",
+      "top_docs": [
+        {
+          "rank": 1,
+          "source": "data/raw/2508.05468v1_tase_token_awareness_and_structured_evaluation_for_multilingual_language_models.pdf",
+          "snippet": "and open-source models exhibit universal weaknesses when\nhandling character structures, satisfying strict constraints,\nor generalizing across languages (particularly Chinese and\nKorean), confirming th"
+        },
+        {
+          "rank": 2,
+          "source": "data/raw/2508.04625v1_finmmr_make_financial_numerical_reasoning_more_multimodal_comprehensive_and_challenging.pdf",
+          "snippet": "hannes Gehrke, Eric Horvitz, Ece Kamar, Peter Lee, Yin Tat\nLee, Yuanzhi Li, Scott Lundberg, Harsha Nori, Hamid\nPalangi, Marco Tulio Ribeiro, and Yi Zhang. Sparks of ar-\ntificial general intelligence: "
+        },
+        {
+          "rank": 3,
+          "source": "data/raw/2508.04416v1_thinking_with_videos_multimodal_tool-augmented_reinforcement_learning_for_long_video_reasoning.pdf",
+          "snippet": "Vision and Pattern Recognition, pages 14662–14672, 2024. 1\n[83] Jihan Yang, Shusheng Yang, Anjali W Gupta, Rilyn Han, Li\nFei-Fei, and Saining Xie. Thinking in space: How multimodal\nlarge language mode"
+        },
+        {
+          "rank": 4,
+          "source": "data/raw/2508.04474v1_trail_joint_inference_and_refinement_of_knowledge_graphs_with_large_language_models.pdf",
+          "snippet": "Azhar, F.; et al. 2023. Llama: Open and efficient founda-\ntion language models. arXiv preprint arXiv:2302.13971.\nWang, J.; Wang, J.; Athiwaratkun, B.; Zhang, C.; and Zou,\nJ. 2024a. Mixture-of-agents e"
+        },
+        {
+          "rank": 5,
+          "source": "data/raw/2508.05498v1_graillearning_to_interact_with_large_knowledge_graphs_for_retrieval_augmented_reasoning.pdf",
+          "snippet": "6612–6633.\nLiu, A.; Feng, B.; Xue, B.; Wang, B.; Wu, B.; Lu, C.; Zhao,\nC.; Deng, C.; Zhang, C.; Ruan, C.; et al. 2024. Deepseek-v3\ntechnical report. arXiv preprint arXiv:2412.19437.\nMavromatis, C.; an"
+        },
+        {
+          "rank": 6,
+          "source": "data/raw/2508.04655v1_x-sam_from_segment_anything_to_any_segmentation.pdf",
+          "snippet": "large language models to the world. arXiv preprint\narXiv:2306.14824.\nQi, L.; Kuen, J.; Guo, W.; Shen, T.; Gu, J.; Jia, J.; Lin, Z.;\nand Yang, M.-H. 2022a. High-quality entity segmentation.\narXiv prepr"
+        },
+        {
+          "rank": 7,
+          "source": "data/raw/2508.05433v1_discovering_interpretable_programmatic_policies_via_multimodal_llm-assisted_evolutionary_search.pdf",
+          "snippet": "Wu, T.; Shen, L.; Dong, Z.; Peng, X.; and Zhao, W. 2024.\nSynthesizing programmatic policy for generalization within\ntask domain. In Proceedings of the Thirty-Third Inter-\nnational Joint Conference on "
+        },
+        {
+          "rank": 8,
+          "source": "data/raw/2508.05509v1_lag_logic-augmented_generation_from_a_cartesian_perspective.pdf",
+          "snippet": "Query-Focused Summarization. arXiv:2404.16130.\nGao, Y .; Xiong, Y .; Gao, X.; Jia, K.; Pan, J.; Bi, Y .; Dai,\nY .; Sun, J.; and Wang, H. 2023. Retrieval-augmented gen-\neration for large language model"
+        },
+        {
+          "rank": 9,
+          "source": "data/raw/2508.05468v1_tase_token_awareness_and_structured_evaluation_for_multilingual_language_models.pdf",
+          "snippet": "Yu, B.; Gao, C.; Huang, C.; Lv, C.; et al. 2025. Qwen3\ntechnical report. arXiv preprint arXiv:2505.09388.\nYehudai, G.; Kaplan, H.; Ghandeharioun, A.; Geva, M.; and\nGloberson, A. 2024. When Can Transfo"
+        },
+        {
+          "rank": 10,
+          "source": "data/raw/2508.04655v1_x-sam_from_segment_anything_to_any_segmentation.pdf",
+          "snippet": "preprint arXiv:2010.11929.\nDuan, H.; Yang, J.; Qiao, Y .; Fang, X.; Chen, L.; Liu,\nY .; Dong, X.; Zang, Y .; Zhang, P.; Wang, J.; et al. 2024.\nVlmevalkit: An open-source toolkit for evaluating large\nm"
+        }
+      ]
+    },
+    {
+      "question": "what is the accuracy improvement when combining models compared to using GPT-4o alone?",
+      "gold_doc": "data/raw/2508.04625v1_finmmr_make_financial_numerical_reasoning_more_multimodal_comprehensive_and_challenging.pdf",
+      "top_docs": [
+        {
+          "rank": 1,
+          "source": "data/raw/2508.05581v1_iterative_learning_of_computable_phenotypes_for_treatment_resistant_hypertension_using_large_language_models.pdf",
+          "snippet": "Even though gpt-4o+SEDI is outperformed by FEAT in individual trials, selecting the\nLLM final model from across the cross-validation experiment yields a final LLM model with\nperformance comparable to "
+        },
+        {
+          "rank": 2,
+          "source": "data/raw/2508.05581v1_iterative_learning_of_computable_phenotypes_for_treatment_resistant_hypertension_using_large_language_models.pdf",
+          "snippet": "the FEAT-trained model (Fig. 5) achieves an AUPRC of 0 .80 and an AUROC of 0 .94;\noverlapping confidence intervals suggest the gpt-4o methods are as good as the prior CP\non this cohort. We also observ"
+        },
+        {
+          "rank": 3,
+          "source": "data/raw/2508.05581v1_iterative_learning_of_computable_phenotypes_for_treatment_resistant_hypertension_using_large_language_models.pdf",
+          "snippet": "We compare the performance of FEAT and gpt-4o-generated models at different levels\nof prompt richness and expert feature inclusion for aTRH in Table 4. The validation columns\nreports the cross-validat"
+        },
+        {
+          "rank": 4,
+          "source": "data/raw/2508.05581v1_iterative_learning_of_computable_phenotypes_for_treatment_resistant_hypertension_using_large_language_models.pdf",
+          "snippet": "models (gpt-4o+SEDI) and FEAT are typically small andgpt-4o+SEDI was superior for the\nHTN-hypoK heuristic. Notably, gpt-4o+SEDI underperforms on the simplest tasks (HTN\nHeuristic/Dx) where other ML me"
+        },
+        {
+          "rank": 5,
+          "source": "data/raw/2508.05545v1_prvl_quantifying_the_capabilities_and_risks_of_large_language_models_for_pii_redaction.pdf",
+          "snippet": "resenting the best efficiency-accuracy trade-off. GPT-4 and\nMixtral(FT) exhibit high F1 but at higher computational cost.\nInstruction-tuned models generally show reduced F1, with\nT5(FT) notably underp"
+        },
+        {
+          "rank": 6,
+          "source": "data/raw/2508.05581v1_iterative_learning_of_computable_phenotypes_for_treatment_resistant_hypertension_using_large_language_models.pdf",
+          "snippet": "Finally, we compared the performance of the best GPT-generated CP for aTRH to the\nFEAT CP reported in prior work, using 300 held-out test subjects. A single final model\nwas selected for gpt-4o variant"
+        },
+        {
+          "rank": 7,
+          "source": "data/raw/2508.04567v1_analyzing_and_mitigating_object_hallucination_a_training_bias_perspective.pdf",
+          "snippet": "Shi, B.; Zhang, X.; Lv, H.; Wang, Y .; Shao, W.; Chu, P.; Tu,\nZ.; He, T.; Wu, Z.; Deng, H.; Ge, J.; Chen, K.; Dou, M.; Lu,\nL.; Zhu, X.; Lu, T.; Lin, D.; Qiao, Y .; Dai, J.; and Wang,\nW. 2024c. Expandi"
+        },
+        {
+          "rank": 8,
+          "source": "data/raw/2508.05618v1_learning_to_reason_for_factuality.pdf",
+          "snippet": "outlined in Section 4.2.\nWe first show that offline RL approaches, as seen in previous work on factuality alignment (Lin et al., 2024),\ncan improve factual precision but ultimately decrease the overal"
+        },
+        {
+          "rank": 9,
+          "source": "data/raw/2508.05631v1_gap_gaussianize_any_point_clouds_with_text_guidance.pdf",
+          "snippet": "compared with three state-of-the-art methods DreamGaus-\nsian [47], TriplaneGaussian [82], and DiffGS [76], all using\nthe same 100K point clouds as input. Please refer to the\nsupplementary for the adap"
+        },
+        {
+          "rank": 10,
+          "source": "data/raw/2508.05534v1_cocolex_confidence-guided_copy-based_decoding_for_grounded_legal_text_generation.pdf",
+          "snippet": "combined with the input or query, and processed\nthem jointly through the model (Ram et al., 2023;\nIzacard et al., 2023). (b) Intermediate-layer integra-\ntion uses semi-parametric modules to incorporat"
+        }
+      ]
+    },
+    {
+      "question": "what is the title of the article by M. P. Friedlander and D. Orban published in Math. Program. Comput. in 2012?",
+      "gold_doc": "data/raw/2508.04370v1_a_factorisation-based_regularised_interior_point_method_using_the_augmented_system.pdf",
+      "top_docs": [
+        {
+          "rank": 1,
+          "source": "data/raw/2508.05537v1_tractable_sharpness-aware_learning_of_probabilistic_circuits.pdf",
+          "snippet": "+\nx\n+\n.\n.\n.\n.\n.\n.\n.\n.\n.\n+\nx\nx\n+\nx\nx\n.\n.\n.\n+\n.\n.\n.\n.\n.\n.\n.\n.\n.\n.\n.\n.\n.\n.\n.\n.\n.\n.\n.\n.\n.\n.\n.\n.\n.\n.\n.\n.\n.\n.\n.\n.\n.\n.\n.\n.\n.\n.\n.\n. \n.\n. \n. \n㗅 = 㗄! \n\"㗄 ! \n!㗄 ! \n#㗄 ! \n#$!㗄 ! \n% 㗅 = 㗄! \n\"㗄! \n!\n㗄! \n#㗄! \n%&!㗅'= "
+        },
+        {
+          "rank": 2,
+          "source": "data/raw/2508.05563v1_carleson_operators_on_doubling_metric_measure_spaces.pdf",
+          "snippet": "12 BECKER, VAN DOORN, JAMNESHAN, SRIVASTAVA, AND THIELE\nProposition 2.2 (antichain operator) . For any antichain A and for all\nf : X → C with |f| ≤1F and all g : X → C with |g| ≤1G\n \nZ\ngTAf dµ\n ≤ 2117"
+        },
+        {
+          "rank": 3,
+          "source": "data/raw/2508.04657v1_cholesky_decomposition_for_symmetric_matrices_over_finite_fields.pdf",
+          "snippet": "We now come to the possibilities over non-definite fields parallel to Theorem B. As we show\nlater, the proof of Theorem B is an application of a key result from [3]. Other main results\nfrom [3] simila"
+        },
+        {
+          "rank": 4,
+          "source": "data/raw/2508.04613v1_trichotomy_for_the_hrt_conjecture_for_mixed_integer_configuration.pdf",
+          "snippet": "• Case 2: (Infinite but non-dense orbits) Surprisingly, this case is significantly\nharder than the first and in our initial note [22], we were only able to observe that\nZero(Zf ) cannot be finite.1\n• "
+        },
+        {
+          "rank": 5,
+          "source": "data/raw/2508.05537v1_tractable_sharpness-aware_learning_of_probabilistic_circuits.pdf",
+          "snippet": "the TS-PC.\nNow , depending on how the two edges relate in the tree, we show that the mixed second partial derivatives take one of the\nfollowing three closed forms.\nTheorem 1. Let ¹nc, ¹n′c′ be two dis"
+        },
+        {
+          "rank": 6,
+          "source": "data/raw/2508.05563v1_carleson_operators_on_doubling_metric_measure_spaces.pdf",
+          "snippet": "32 BECKER, VAN DOORN, JAMNESHAN, SRIVASTAVA, AND THIELE\nUsing Lemma 5.9, we estimate the last display by\n≤\nX\nN≥0\n2−pN/(2a2+a3)+101a3+Na dens1(A)µ (∪p∈AI(p)) . (5.25)\nRecalling p = 4a4 and using a ≥ 4,"
+        },
+        {
+          "rank": 7,
+          "source": "data/raw/2508.04657v1_cholesky_decomposition_for_symmetric_matrices_over_finite_fields.pdf",
+          "snippet": "6 PRATEEK KUMAR VISHWAKARMA\n(1) The entrywise transform f[−] sends LP MFq\nn (ϵ′) into LP MFq\nn (ϵ).\n(2) The sign patterns are equal, and f is a positive multiple of a power of the Frobenius:\nϵ′ = ϵ an"
+        },
+        {
+          "rank": 8,
+          "source": "data/raw/2508.05605v1_annular_sl2_and_sl3_web_algebras.pdf",
+          "snippet": "44 ROSTISLAV AKHMECHET, MIKHAIL KHOVANOV, AND MELISSA ZHANG\n∓ ± ±\n1 1 0 G\n1 1 0\n1 1 .\nIn this case, applying two steps of the growth algorithm toM(w) yields\n± ∓ ±\n1 1 0 G\n1 1 0\n1 0\n11 .\nWe see that we"
+        },
+        {
+          "rank": 9,
+          "source": "data/raw/2508.05569v1_harmonic_analysis_and_automatic_continuity_in_the_context_of_generalized_differential_subalgebras.pdf",
+          "snippet": "London Math. Soc. (3) 82.3 (2001), pp. 676–700.\nADDRESS\nFelipe I. Flores\nDepartment of Mathematics, University of Virginia,\n114 Kerchof Hall. 141 Cabell Dr,\nCharlottesville, Virginia, United States\nE-"
+        },
+        {
+          "rank": 10,
+          "source": "data/raw/2508.04657v1_cholesky_decomposition_for_symmetric_matrices_over_finite_fields.pdf",
+          "snippet": "Nullstellen, Polynome Determinanten, Zahlentheorie, volume Band 74 of Heidelberger Taschenb¨ ucher\n[Heidelberg Paperbacks]. Springer-Verlag, Berlin-New York, 1971.\n[10] Walter Rudin. Positive definite"
+        }
+      ]
+    },
+    {
+      "question": "what is the average score comparison among the top-ranking models?",
+      "gold_doc": "data/raw/2508.04576v1_confprobench_a_confidence_evaluation_benchmark_for_mllm-based_process_judges.pdf",
+      "top_docs": [
+        {
+          "rank": 1,
+          "source": "data/raw/2508.05606v1_uni-cot_towards_unified_chain-of-thought_reasoning_across_text_and_vision.pdf",
+          "snippet": "Table 3. Quantitative comparisons on KRIS [40]. Uni-CoT achieves the top-1 performance among open-source models on the KRIS\nbenchmark and even surpasses the commercial model Gemini 2.0 by 5.59 points "
+        },
+        {
+          "rank": 2,
+          "source": "data/raw/2508.05512v1_rankarena_a_unified_platform_for_evaluating_retrieval_reranking_and_rag_with_human_and_llm_feedback.pdf",
+          "snippet": "10\n20\n30\n40\n50\nMethod Performance\nMethods\nAverage BEIR Score\nFigure 5: Average BEIR performance of different reranking\nmethods.\nT he BEIR Average shows strong correlations with DBPedia\n(0.84), Covid ("
+        },
+        {
+          "rank": 3,
+          "source": "data/raw/2508.05468v1_tase_token_awareness_and_structured_evaluation_for_multilingual_language_models.pdf",
+          "snippet": "Tokens) of 16384, Topp of 0.95, and Topk of 50.\nEvaluated Models. We evaluated over 20 leading large\nlanguage models to provide a comprehensive view of the\ncurrent landscape. These models fall into th"
+        },
+        {
+          "rank": 4,
+          "source": "data/raw/2508.05512v1_rankarena_a_unified_platform_for_evaluating_retrieval_reranking_and_rag_with_human_and_llm_feedback.pdf",
+          "snippet": "Figure 3: Illustration of our LLM Judge RAG prompt template.\nThe LLM evaluates RAG results by comparing retrieved doc-\numents, generated answers, and evidence alignment.\nThis formulation reflects both"
+        },
+        {
+          "rank": 5,
+          "source": "data/raw/2508.05512v1_rankarena_a_unified_platform_for_evaluating_retrieval_reranking_and_rag_with_human_and_llm_feedback.pdf",
+          "snippet": "global model rankings.\nArena Battles and Preference Collection: At the heart of RankArena\nlies the 1v1 Arena, a head-to-head evaluation interface where two\nrerankers, retrieval systems, or RAG pipelin"
+        },
+        {
+          "rank": 6,
+          "source": "data/raw/2508.04419v1_algorithm_selection_for_recommender_systems_via_meta-learning_on_algorithm_characteristics.pdf",
+          "snippet": "Restaurants LK_ImplicitMF 0.150 0.380 0.083 13.33% 32.12% 0.154 +2.46% +86.56% 20.45% 30.61% 1.64%\nAverage N/A 0.131 0.282 0.135 20.24% 59.07% 0.147 +12.07% +8.83% 21.63% 62.74% 10.49%\nNote: SBA = Sin"
+        },
+        {
+          "rank": 7,
+          "source": "data/raw/2508.05512v1_rankarena_a_unified_platform_for_evaluating_retrieval_reranking_and_rag_with_human_and_llm_feedback.pdf",
+          "snippet": "a gap between the strongest and weakest reranking strategies.\nHuman-LLM Agreement. We assess next the alignment between\nhuman votes and LLM judge decisions. Figure 6 shows a scatter plot\nof human pref"
+        },
+        {
+          "rank": 8,
+          "source": "data/raw/2508.05512v1_rankarena_a_unified_platform_for_evaluating_retrieval_reranking_and_rag_with_human_and_llm_feedback.pdf",
+          "snippet": "board. We compute win rates 𝑤𝑖 = wins𝑖\ntotal votes𝑖\nand transform these\ninto an ELO-style rating:\n𝑅𝑖 = 1200 +32 ·(𝑤𝑖 −0.5)· min (log(total votes𝑖 +1), 5.0)\nLLM Judge RAG Prompt Template\nSystem Prompt:"
+        },
+        {
+          "rank": 9,
+          "source": "data/raw/2508.04399v1_improving_crash_data_quality_with_large_language_models_evidence_from_secondary_crash_narratives_in_kentucky.pdf",
+          "snippet": "12 \n \n \nFigure 2 F1 score vs. inference time for each model, illustrating the trade-off between \nmodel performance and computational efficiency"
+        },
+        {
+          "rank": 10,
+          "source": "data/raw/2508.05468v1_tase_token_awareness_and_structured_evaluation_for_multilingual_language_models.pdf",
+          "snippet": "ference between the two performance measures.\nTo support this analysis, we visualized the results across\nthree key dimensions: mean absolute error(Willmott and\nMatsuura 2005), Pearson correlation coef"
+        }
+      ]
+    },
+    {
+      "question": "what is a key innovation of the Qwen3-235B-A22B model from Alibaba?",
+      "gold_doc": "data/raw/2508.04531v1_unveiling_the_landscape_of_clinical_depression_assessment_from_behavioral_signatures_to_psychiatric_reasoning.pdf",
+      "top_docs": [
+        {
+          "rank": 1,
+          "source": "data/raw/2508.05503v1_autoiad_manager-driven_multi-agent_collaboration_for_automated_industrial_anomaly_detection.pdf",
+          "snippet": "AI model from Deepseek, known for its strong dialogue\ncapabilities, natural language understanding, and ability to\nfollow complex instructions. This model offers insights into\nhow models specialized i"
+        },
+        {
+          "rank": 2,
+          "source": "data/raw/2508.05503v1_autoiad_manager-driven_multi-agent_collaboration_for_automated_industrial_anomaly_detection.pdf",
+          "snippet": "component, we assess the agent’s ability to operate solely\nwith its LLM’s inherent knowledge and real-time inference\ncapabilities. The experimental results are presented in Ta-\nble 10.\nDetails of Agen"
+        },
+        {
+          "rank": 3,
+          "source": "data/raw/2508.05468v1_tase_token_awareness_and_structured_evaluation_for_multilingual_language_models.pdf",
+          "snippet": "complexity of CJK languages. Korean’s featural syllabic\nsystem and Chinese’s logographic structure require holistic\nmodeling of sub-character components, such as jamo or rad-\nicals. Current models lac"
+        },
+        {
+          "rank": 4,
+          "source": "data/raw/2508.04625v1_finmmr_make_financial_numerical_reasoning_more_multimodal_comprehensive_and_challenging.pdf",
+          "snippet": "Ye, Longhui Yu, Mengnan Dong, Neo Zhang, Ningchen\nMa, Qiwei Pan, Qucheng Gong, Shaowei Liu, Shengling\nMa, Shupeng Wei, Sihan Cao, Siying Huang, Tao Jiang,\nWeihao Gao, Weimin Xiong, Weiran He, Weixiao "
+        },
+        {
+          "rank": 5,
+          "source": "data/raw/2508.05503v1_autoiad_manager-driven_multi-agent_collaboration_for_automated_industrial_anomaly_detection.pdf",
+          "snippet": "Yang, A.; Li, A.; Yang, B.; Zhang, B.; Hui, B.; Zheng, B.;\nYu, B.; Gao, C.; Huang, C.; Lv, C.; Zheng, C.; Liu, D.; Zhou,\nF.; Huang, F.; Hu, F.; Ge, H.; Wei, H.; Lin, H.; Tang, J.;\nYang, J.; Tu, J.; Zh"
+        },
+        {
+          "rank": 6,
+          "source": "data/raw/2508.05468v1_tase_token_awareness_and_structured_evaluation_for_multilingual_language_models.pdf",
+          "snippet": "后位置都与原句不相邻。输入：除此之外\n的其他城市其\nModel Performance Comparison Prediction (qwen2.5-\n14b-instruct, Pre-GRPO):\n<answer>城 市 之 外 的 此 其 其\n他</answer>\nPrediction (qwen2.5-14b-grpo, Post-GRPO):\n首先，我们将输入的字符串分解成单独\n的汉字："
+        },
+        {
+          "rank": 7,
+          "source": "data/raw/2508.05468v1_tase_token_awareness_and_structured_evaluation_for_multilingual_language_models.pdf",
+          "snippet": "The Yi-1.5 series shows only marginal gains despite a\nnearly sixfold increase in size, while Qwen2.5-Instruct ex-\nhibits smoother scaling but still lags behind Qwen3. These\npatterns suggest that beyon"
+        },
+        {
+          "rank": 8,
+          "source": "data/raw/2508.05598v1_unveiling_the_lithium-ion_transport_mechanism_in_li2zrcl6_solid-state_electrolyte_via_deep_learning-accelerated_molecula.pdf",
+          "snippet": "33 \n \n[16] Han, Y .; Jung, S. H.; Kwak, H.; Jun, S.; Kwak, H. H.; Lee, J. H.; Hong, S.; Jung, Y . S. Single‐ or Poly‐\nCrystalline Ni‐Rich Layered Cathode, Sulfide or Halide Solid Electrolyte: Which Wi"
+        },
+        {
+          "rank": 9,
+          "source": "data/raw/2508.05598v1_unveiling_the_lithium-ion_transport_mechanism_in_li2zrcl6_solid-state_electrolyte_via_deep_learning-accelerated_molecula.pdf",
+          "snippet": "protection layer. Advanced Energy Materials 2021, 12 (2). \n[11] Jiang, P.; Du, G.; Cao, J.; Zhang, X.; Zou, C.; Liu, Y .; Lu, X. Solid‐State Li Ion Batteries with Oxide Solid \nElectrolytes: Progress a"
+        },
+        {
+          "rank": 10,
+          "source": "data/raw/2508.05598v1_unveiling_the_lithium-ion_transport_mechanism_in_li2zrcl6_solid-state_electrolyte_via_deep_learning-accelerated_molecula.pdf",
+          "snippet": "Y . S. New Cost‐Effective Halide Solid Electrolytes for All‐Solid‐State batteries: Mechanochemically prepared \nFe3+‐Substituted Li2ZrCl6. Advanced Energy Materials 2021, 11 (12). \n[25] Wang, K.; Gu, Z"
+        }
+      ]
+    }
+  ],
+  "note": "Doc-level recall using evidence.source match"
+}

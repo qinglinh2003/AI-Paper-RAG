@@ -8,8 +8,8 @@ from transformers import AutoTokenizer, AutoModelForCausalLM, BitsAndBytesConfig
 import transformers
 transformers.utils.logging.set_verbosity_error()
 
-from langchain_community.vectorstores import FAISS
-from langchain_community.embeddings import HuggingFaceEmbeddings
+from src.retrieval.pipeline import retrieve_then_rerank
+from src.retrieval.context import build_context
 
 SMOKE_LIMIT  = None
 FIVE_LEVELS  = [1.0, 0.8, 0.6, 0.3, 0.0]
@@ -31,14 +31,6 @@ def load_cfg(cfg_path: str) -> Dict[str, Any]:
     if "embedding" not in cfg:
         cfg["embedding"] = {"model": "sentence-transformers/all-MiniLM-L6-v2"}
     return cfg
-
-def build_retriever(cfg):
-    embed_model = cfg["embedding"]["model"]
-    index_dir   = cfg["eval"]["index_dir"]
-    topk        = int(cfg["eval"]["topk"])
-    embed = HuggingFaceEmbeddings(model_name=embed_model)
-    vs = FAISS.load_local(index_dir, embed, allow_dangerous_deserialization=True)
-    return vs.as_retriever(search_kwargs={"k": topk})
 
 def load_model(name: str, use_8bit: bool):
     qcfg = BitsAndBytesConfig(load_in_8bit=True) if use_8bit else None
@@ -86,7 +78,6 @@ JUDGE_SYS = (
     "Output the score only."
 )
 
-
 JUDGE_USER_TMPL = """Question: {question}
 ReferenceAnswer: {ref_answer}
 ModelAnswer: {pred_answer}
@@ -108,8 +99,6 @@ def main():
     if SMOKE_LIMIT is not None:
         eval_items = eval_items[:SMOKE_LIMIT]
 
-    retriever = build_retriever(cfg)
-
     ans_name = acc_cfg["answer_model"]
     jdg_name = acc_cfg["judge_model"]
     tok_ans, mdl_ans = load_model(ans_name, acc_cfg["use_8bit"])
@@ -120,15 +109,14 @@ def main():
 
     results: List[Dict[str, Any]] = []
 
-    for it in tqdm(eval_items, desc="Accuracy eval (5-level, LLM-only)", unit="q"):
+    for it in tqdm(eval_items, desc="Accuracy eval (5-level)", unit="q"):
         q   = (it.get("question") or "").strip()
         ref = (it.get("reference_answer") or "").strip()
         if not q or not ref:
             continue
 
-        docs = retriever.get_relevant_documents(q)
-        ctx  = "\n\n".join(d.page_content for d in docs[: int(eval_cfg["topk"])])
-        ctx  = ctx[:3500]
+        docs = retrieve_then_rerank(q, args.config, topn=int(cfg["app"].get("max_context_docs", 4)))
+        ctx  = build_context(docs[: int(cfg["app"].get("max_context_docs", 4))], max_chars=3500, with_tags=True)
 
         pred = chat_generate(
             tok_ans, mdl_ans,
@@ -140,7 +128,6 @@ def main():
             f'Context:\n"""\n{ctx}\n"""\n\nQuestion: {q}\nAnswer in 1-2 sentences:',
             max_new_tokens=int(acc_cfg["max_answer_tokens"])
         )
-
 
         out = chat_generate(
             tok_jdg, mdl_jdg,

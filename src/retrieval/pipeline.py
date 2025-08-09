@@ -1,4 +1,3 @@
-# src/retrieval/pipeline.py
 import yaml, re
 from functools import lru_cache
 from .retriever import VectorRetriever

@@ -1,5 +1,5 @@
 # AI Paper Retrieval-Augmented Generation (RAG) System
-
+![Demo Screenshot](assets/demo.png)
 ## Overview
 This project implements a **retrieval-augmented generation pipeline** for **150 AI research papers**, enabling accurate, context-aware answers to technical questions.  
 The system is built with **LangChain**, **FAISS**, and **HuggingFace Transformers**, delivering an end-to-end solution from data processing to automated evaluation.

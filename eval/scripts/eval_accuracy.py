@@ -161,8 +161,15 @@ def main():
             "score": score
         })
 
+    output = {
+    "score_distribution": dist,
+    "avg_score": round(avg, 4),
+    "results": results
+    }
+
     Path(REPORT_FILE).parent.mkdir(parents=True, exist_ok=True)
-    Path(REPORT_FILE).write_text(json.dumps(results, ensure_ascii=False, indent=2))
+    Path(REPORT_FILE).write_text(json.dumps(output, ensure_ascii=False, indent=2))
+
 
     dist = {lv: 0 for lv in FIVE_LEVELS}
     for r in results: dist[r["score"]] = dist.get(r["score"], 0) + 1

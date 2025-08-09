@@ -1,23 +1,17 @@
 import re
 import yaml
+import argparse
 from pathlib import Path
-from langchain_community.document_loaders import (
-    PyPDFLoader,
-    UnstructuredMarkdownLoader,
-    TextLoader,
-)
+from langchain_community.document_loaders import PyPDFLoader, UnstructuredMarkdownLoader, TextLoader
 from langchain_text_splitters import RecursiveCharacterTextSplitter
 from langchain_community.vectorstores import FAISS
 from langchain_huggingface import HuggingFaceEmbeddings
 
-
-def load_config():
-    with open("configs/default.yaml", "r") as f:
+def load_config(path: str):
+    with open(path, "r") as f:
         return yaml.safe_load(f)
 
-
 def load_docs(raw_dir: str):
-    """Load PDF/MD/TXT from data/raw."""
     docs = []
     for p in Path(raw_dir).rglob("*"):
         suf = p.suffix.lower()
@@ -32,9 +26,7 @@ def load_docs(raw_dir: str):
             print(f"[warn] failed to load {p.name}: {e}")
     return docs
 
-
 def sanitize_text(s: str) -> str:
-    """Remove control chars, normalize whitespace, and ensure UTF-8."""
     if not isinstance(s, str):
         s = str(s)
     s = re.sub(r"[\x00-\x08\x0B-\x0C\x0E-\x1F]", " ", s)
@@ -43,9 +35,12 @@ def sanitize_text(s: str) -> str:
     s = re.sub(r"[ \t]+", " ", s)
     return s
 
-
 def main():
-    cfg = load_config()
+    parser = argparse.ArgumentParser()
+    parser.add_argument("--config", "-c", type=str, default="configs/default.yaml")
+    args = parser.parse_args()
+
+    cfg = load_config(args.config)
     raw_dir = cfg["data"]["raw_dir"]
     vs_path = cfg["vectorstore"]["path"]
 
@@ -64,7 +59,7 @@ def main():
     texts, metas = [], []
     for d in chunks:
         pc = sanitize_text(getattr(d, "page_content", ""))
-        if len(pc) < 10:  
+        if len(pc) < 10:
             continue
         texts.append(pc)
         metas.append(getattr(d, "metadata", {}))
@@ -80,7 +75,6 @@ def main():
     Path(vs_path).parent.mkdir(parents=True, exist_ok=True)
     db.save_local(vs_path)
     print(f"FAISS index saved to {vs_path}")
-
 
 if __name__ == "__main__":
     main()

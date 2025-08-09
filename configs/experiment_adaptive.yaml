@@ -1,5 +1,5 @@
 model:
-  llm: "Qwen/Qwen2.5-7B-Instruct"
+  llm: "Qwen/Qwen2.5-14B-Instruct"
   backend: "transformers"
   dtype: "float16"
   device_map: "auto"
@@ -37,3 +37,10 @@ eval:
   no_anchor: "eval/data/evaluation_set_no_anchor.json"
   recall_file: "eval/reports/adaptive/recall_report.json"
   accuracy_file: "eval/reports/adaptive/accuracy_report.json"
+
+eval_accuracy:
+  answer_model: "Qwen/Qwen2.5-14B-Instruct"
+  judge_model:  "Qwen/Qwen2.5-14B-Instruct"
+  use_8bit: false
+  max_answer_tokens: 128
+  max_judge_tokens: 64

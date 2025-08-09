@@ -1,3 +1,4 @@
+# src/retrieval/pipeline.py
 import yaml, re
 from functools import lru_cache
 from .retriever import VectorRetriever
@@ -24,34 +25,27 @@ def _cap_per_source(docs, cap=1):
     return out
 
 _sent_splitter = re.compile(r'(?<=[\.!?。！？])\s+')
+_tok = re.compile(r"[A-Za-z0-9\-\_]+")
 
 def _split_sentences(text: str):
     text = (text or "").strip()
     if not text: return []
-    parts = _sent_splitter.split(text)
-    return [p.strip() for p in parts if p.strip()]
+    return [p.strip() for p in _sent_splitter.split(text) if p.strip()]
 
-def _score_sentences_simple(query: str, sentences):
-    q = set(re.findall(r"[A-Za-z0-9\-\_]+", (query or "").lower()))
-    scores = []
-    for s in sentences:
-        toks = set(re.findall(r"[A-Za-z0-9\-\_]+", s.lower()))
-        overlap = len(q & toks)
-        bonus = sum(1 for t in q if t and t in s) 
-        scores.append(overlap + 0.1 * bonus)
-    return scores
-
-def _pick_chunk_by_best_sentence(query: str, cand_docs):
-    best_doc, best_score = None, float("-inf")
-    for d in cand_docs:
-        sents = _split_sentences(d.page_content)
-        if not sents:
-            continue
-        scores = _score_sentences_simple(query, sents)
-        s = max(scores) if scores else 0.0
-        if s > best_score:
-            best_score, best_doc = s, d
-    return best_doc if best_doc is not None else (cand_docs[0] if cand_docs else None)
+def _best_sent_score_and_cov(query: str, text: str):
+    qset = set(_tok.findall((query or "").lower()))
+    sents = _split_sentences(text)
+    best = 0.0
+    alltok = set()
+    for s in sents:
+        toks = set(_tok.findall(s.lower()))
+        alltok |= toks
+        overlap = len(qset & toks)
+        bonus = sum(1 for t in qset if t in toks)
+        sc = overlap + 0.1 * bonus
+        if sc > best: best = sc
+    cov = (len(qset & alltok) / max(1, len(qset))) if qset else 0.0
+    return best, cov
 
 def retrieve_then_rerank(query: str, cfg_path: str, topn: int = None, mode: str = "accuracy"):
     cfg = yaml.safe_load(open(cfg_path))
@@ -71,15 +65,36 @@ def retrieve_then_rerank(query: str, cfg_path: str, topn: int = None, mode: str 
         limit = topn if topn is not None else max(10, rk)
         return docs[:limit]
 
-    if mode == "accuracy":
-        docs = _cap_per_source(docs, cap=1)
-        cands = docs[:rk]
-        if cands:
-            best = _pick_chunk_by_best_sentence(query, cands)
-            docs = [best] if best is not None else cands[:1]
+    cap = int(cfg["retrieval"].get("diversity_cap", 1))
+    docs = _cap_per_source(docs, cap=cap)
+    cands = docs[:rk]
+
+    adp = cfg["retrieval"].get("adaptive", {})
+    use_adp = bool(adp.get("enabled", True))
+    if not use_adp or not cands:
         cutoff = topn if topn is not None else 1
-        return docs[:cutoff]
+        return cands[:cutoff]
 
-    return docs[: (topn if topn is not None else rk)]
+    scored = []
+    for d in cands:
+        s, cov = _best_sent_score_and_cov(query, d.page_content or "")
+        scored.append((s, cov, d))
+    scored.sort(key=lambda x: x[0], reverse=True)
 
+    s1, cov1, d1 = scored[0]
+    s2 = scored[1][0] if len(scored) > 1 else 0.0
 
+    tau_abs = float(adp.get("abs", 1.5))
+    tau_gap = float(adp.get("gap", 0.5))
+    tau_cov = float(adp.get("cov", 0.5))
+    maxk = int(cfg["app"].get("max_context_docs", 3))
+
+    K = 1
+    if (s1 < tau_abs) or (s1 - s2 < tau_gap) or (cov1 < tau_cov):
+        K = min(maxk, 2)
+        if s1 < 0.5 and cov1 < 0.3:
+            K = min(maxk, 3)
+
+    selected = [t[2] for t in scored[:K]]
+    cutoff = topn if topn is not None else K
+    return selected[:cutoff]

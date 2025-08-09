@@ -1,0 +1,46 @@
+model:
+  llm: "Qwen/Qwen2.5-14B-Instruct"
+  backend: "transformers"
+  dtype: "float16"
+  device_map: "auto"
+
+embedding:
+  model: "BAAI/bge-large-en-v1.5"
+
+reranker:
+  model: "BAAI/bge-reranker-v2-m3"
+  enabled: true
+
+retrieval:
+  top_k: 60
+  rerank_k: 12
+  diversity_cap: 1
+  adaptive:
+    enabled: true
+    abs: 1.8
+    gap: 0.7
+    cov: 0.6
+
+app:
+  max_context_docs: 3
+  max_new_tokens: 256
+
+data:
+  raw_dir: "data/raw"
+  processed_dir: "data/processed"
+
+vectorstore:
+  path: "data/processed/faiss_index"
+
+eval:
+  anchor: "eval/data/evaluation_set.json"
+  no_anchor: "eval/data/evaluation_set_no_anchor.json"
+  recall_file: "eval/reports/adaptivev2/recall_report.json"
+  accuracy_file: "eval/reports/adaptivev2/accuracy_report.json"
+
+eval_accuracy:
+  answer_model: "Qwen/Qwen2.5-14B-Instruct"
+  judge_model:  "Qwen/Qwen2.5-14B-Instruct"
+  use_8bit: false
+  max_answer_tokens: 128
+  max_judge_tokens: 64

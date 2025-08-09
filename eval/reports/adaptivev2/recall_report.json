@@ -1,0 +1,10 @@
+{
+  "total": 100,
+  "recall@1": 0.94,
+  "recall@3": 0.99,
+  "recall@5": 0.99,
+  "recall@10": 1.0,
+  "mrr@10": 0.9643,
+  "failures_sample": [],
+  "note": "Doc-level recall using evidence.source match"
+}

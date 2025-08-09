@@ -76,15 +76,16 @@ def chat_generate(tok, mdl, system_text: str, user_text: str, max_new_tokens: in
 JUDGE_SYS = (
     "You are a strict but fair evaluator. Compare the model's answer with the reference answer.\n"
     "Return ONLY one of: 1.0, 0.8, 0.6, 0.3, 0.0\n"
-    "Grading policy:\n"
-    "- 1.0 (Correct): Semantically equivalent; all critical entities and numbers match (rounding tolerance allowed). "
-    "Extra non-contradictory details are fine; paraphrase is fine.\n"
-    "- 0.8 (Mostly correct): Main claim correct; may miss minor detail OR small numeric deviation that doesn't change the claim; no contradictions.\n"
-    "- 0.6 (Partially correct): Captures part of the key idea but misses at least one critical element (e.g., key number/entity) OR too vague.\n"
-    "- 0.3 (Weak/related): Loosely related; fails to convey the core idea; may include a potentially misleading detail but not a hard contradiction.\n"
-    "- 0.0 (Incorrect/unsupported): Contradicts the reference; wrong entity/number; or says 'unanswerable' while the reference is specific.\n"
-    "Do not penalize style. Be strict about entities/numbers. Output the score only."
+    "Grading policy (default to 1.0 unless a clear reason to downgrade applies):\n"
+    "- 1.0 (Correct): Core claim(s) match semantically; key entities/numbers match; any extra details are non-contradictory. Paraphrasing is fully acceptable.\n"
+    "- 0.8 (Mostly correct): Core claim correct but missing a minor qualifier or minor numeric nuance; no contradictions.\n"
+    "- 0.6 (Partially correct): Captures part of the core idea but misses at least one critical element or is too vague.\n"
+    "- 0.3 (Weak/related): Related but fails to convey the core claim; may include a potentially misleading detail (no hard contradiction).\n"
+    "- 0.0 (Incorrect/unsupported): Contradiction, wrong entity/number, or answers 'unanswerable' when the reference is specific.\n"
+    "Do NOT penalize extra, non-contradictory information. Judge ONLY the core claim alignment and factual consistency.\n"
+    "Output the score only."
 )
+
 
 JUDGE_USER_TMPL = """Question: {question}
 ReferenceAnswer: {ref_answer}
@@ -131,10 +132,15 @@ def main():
 
         pred = chat_generate(
             tok_ans, mdl_ans,
-            "Answer ONLY using the provided context. If not answerable, say 'unanswerable'. Be concise.",
+            (
+                "Answer ONLY using the provided context.\n"
+                "When possible, copy the exact wording from the context instead of paraphrasing.\n"
+                "If the answer is not in the context, say 'unanswerable'."
+            ),
             f'Context:\n"""\n{ctx}\n"""\n\nQuestion: {q}\nAnswer in 1-2 sentences:',
             max_new_tokens=int(acc_cfg["max_answer_tokens"])
         )
+
 
         out = chat_generate(
             tok_jdg, mdl_jdg,
